@@ -242,7 +242,7 @@ if __name__ == "__main__":
 
 
     </style>''', unsafe_allow_html=True)
-        lottie_gif = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_x17ybolp.json")
+    lottie_gif = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_x17ybolp.json")
     full_name = "Pranav Kishor Baviskar"
 
     with st.container():
