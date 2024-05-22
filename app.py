@@ -178,7 +178,29 @@ def main():
     figma_lottie = load_lottieurl("https://lottie.host/5b6292ef-a82f-4367-a66a-2f130beb5ee8/03Xm3bsVnM.json")
     js_lottie = load_lottieurl("https://lottie.host/fc1ad1cd-012a-4da2-8a11-0f00da670fb9/GqPujskDlr.json")
     with st.container():
-        st.subheader('⚒️ Skills')
+        st.subheader('⚙️ Functional Skills')
+        col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
+        with col1:
+            st_lottie(python_lottie, height=70,width=70, key="python", speed=2.5)
+        with col2:
+            st_lottie(java_lottie, height=70,width=70, key="java", speed=4)
+        with col3:
+            st_lottie(my_sql_lottie,height=70,width=70, key="mysql", speed=2.5)
+        with col4:
+            st_lottie(git_lottie,height=70,width=70, key="git", speed=2.5)
+        with col1:
+            st_lottie(github_lottie,height=50,width=50, key="github", speed=2.5)
+        with col2:
+            st_lottie(docker_lottie,height=70,width=70, key="docker", speed=2.5)
+        with col3:
+            st_lottie(figma_lottie,height=50,width=50, key="figma", speed=2.5)
+        with col4:
+            st_lottie(js_lottie,height=50,width=50, key="js", speed=1)
+
+
+
+    with st.container():
+        st.subheader('⚒️ Technical Skills')
         col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
         with col1:
             st_lottie(python_lottie, height=70,width=70, key="python", speed=2.5)
