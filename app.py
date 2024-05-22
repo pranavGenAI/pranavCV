@@ -138,7 +138,7 @@ def user_input(user_question, api_key):
     
     #Sample Example
     print('response is here......',response["output_text"])
-    st.info(response["output_text"])
+    st.write(response["output_text"])
 
 def gradient(color1, color2, color3, content1, content2):
     st.markdown(f'<h1 style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2});font-size:60px;border-radius:2%;">'
