@@ -13,7 +13,7 @@ from langchain_community.vectorstores import FAISS
 from langchain.chains import LLMChain
 import time
 from streamlit_lottie import st_lottie
-
+import requests
 st.set_page_config(page_title="Pranav Baviskar ", layout="wide",page_icon='🧑🏻‍💼')
 
 st.markdown("""
@@ -103,11 +103,7 @@ def get_vector_store(text_chunks, api_key):
     vector_store = FAISS.from_texts(text_chunks, embedding=embeddings)
     vector_store.save_local("faiss_index")
 
-def load_lottieurl(url: str):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
+
 
 def get_conversational_chain():
     prompt_template = """
@@ -149,7 +145,12 @@ def gradient(color1, color2, color3, content1, content2):
                 f'<span style="color:white;font-size:17px;">{content2}</span></h1>', 
                 unsafe_allow_html=True)
 
-
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+    
 def main():
     st.header("Pranav's AI Agent")
     st.markdown("""
