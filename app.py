@@ -145,7 +145,7 @@ def main():
     }
     </style>
     """, unsafe_allow_html=True)
-    user_question = st.text_input("Ask a Question from the RFP Files", key="user_question")
+    user_question = st.text_input("Ask my AI buddy!", key="user_question")
 
     if user_question and api_key:  # Ensure API key and user question are provided
         if user_question:
@@ -189,7 +189,7 @@ def main():
         raw_text = get_pdf_text(pdf_docs)
         text_chunks = get_text_chunks(raw_text)
         get_vector_store(text_chunks, api_key)
-        st.success("Hi, Pranav Baviskar here! Type your questions and hit Enter to learn more about me from my AI agent, Buddy!)
+        st.success("Hi Pranav Baviskar here! Type your questions and hit Enter to learn more about me from my AI Buddy!)
         st.write("")
         st.image("https://lh3.googleusercontent.com/drive-viewer/AKGpihYU8EA7b_VKFOW3KfjRqOnyWczVTZkTRzAMwB2IQN23hdCaSh_J3EWOhb0Sc0m3ZKAzLn46tQr1ZrlGfXrCxGKb0WCIWJd5wzg=s2560", width = 150)
         
