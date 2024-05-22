@@ -172,7 +172,7 @@ def main():
         col1,col2 = st.columns([8,3])
 
         with col1:
-            gradient('#FFD4DD','#000395','e0fbfc',f"Hi, I'm {full_name}👋", "Management Consultant at Accenture Strategy")
+            gradient('#6c028d','#760fb1','#970e79',f"Hi, I'm {full_name}👋", "Management Consultant at Accenture Strategy")
             st.write("")
             st.write("Hey there, I'm Pranav! I'm passionate about leveraging data and technology to drive meaningful insights and solutions in business. Check out my LinkedIn profile on https://www.linkedin.com/in/pranav-baviskar/")   
         with col2:
