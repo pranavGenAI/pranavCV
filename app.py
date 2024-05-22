@@ -15,6 +15,7 @@ import time
 
 st.set_page_config(page_title="Pranav Baviskar ", layout="wide",page_icon='🧑🏻‍💼')
 
+st.write(os.cwd())
 st.markdown("""
     <style>
         @keyframes gradientAnimation {
