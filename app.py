@@ -13,7 +13,7 @@ from langchain_community.vectorstores import FAISS
 from langchain.chains import LLMChain
 import time
 
-st.set_page_config(page_title="BidBooster ", layout="wide")
+st.set_page_config(page_title="Pranav Baviskar ", layout="wide",page_icon='🧑🏻‍💼')
 
 st.markdown("""
     <style>
@@ -64,7 +64,7 @@ st.markdown("""
         
     </style>
     <p class="animated-gradient-text_">
-        BidBooster: Simplifying Your Bid Process!
+        Pranav Baviskar | Management Consultant @ Accenture Strategy
     </p>
 """, unsafe_allow_html=True)
 
@@ -103,10 +103,11 @@ def get_vector_store(text_chunks, api_key):
 
 def get_conversational_chain():
     prompt_template = """
-    Answer the question as detailed as possible from the provided context. Change the wording of answer and start in the most polite way. Write the summary of answer and then provide the detail answer. Start with polite and nice statement. You can use greetings if you want. Don't provide the wrong answer. If you are giving answer and not using context to frame the answer then let the user know that the answer is not from the context.\n\n. And remember to format your answer in nicer way. End your response with disclaimer telling about the answer is from the context. Remember to be polite and start answer with assistant greetings. 
-    Context:\n {context}?\n
-    Question: \n{question}\n .Make sure you are summarizing and changing the wording of context before you write answer in easy to understand language and format it in better way. Provide the disclaimer in best possible way at the of question saying the answer is based on the context and accuracy needs to be checked from the source.
-
+    You are Buddy, an AI assistant dedicated to assisting Pranav Baviskar in his job search by providing recruiters with relevant and concise information. 
+    If you do not know the answer, politely admit it and let recruiters know how to contact Pranav Baviskar to get more information. 
+    Don't put "Buddy" or a breakline in the front of your answer.
+    Here is the context to know more about Pranav: {context}
+    Human: {question}
     Answer:
     """
     model = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.3, google_api_key=api_key)
@@ -135,40 +136,6 @@ def user_input(user_question, api_key):
     st.write("BidBooster: ", response["output_text"])
     #st.write("BidBooster: ", response["output_text"])
 
-def get_conversation_string():
-    conversation_string = ""
-    for i in range(len(st.session_state['responses'])-1):
-        
-        conversation_string += "Human: "+st.session_state['requests'][i] + "\n"
-        conversation_string += "Bot: "+ st.session_state['responses'][i+1] + "\n"
-    return conversation_string
-
-def query_refiner(conversation, user_question):
-    prompt=f"""
-    Given the following user query and conversation log, formulate a question that would be the most relevant to provide the user with an answer from a knowledge base.\n\nCONVERSATION LOG: \n{conversation}\n\nQuery: {user_question}\n\nRefined Query:"
-
-    """
-    prompt = PromptTemplate(template=prompt, input_variables=["conversation","user_question"])
-    print("Prompt is....",prompt)
-    model = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.3, google_api_key=api_key)
-    chat_llm_chain = LLMChain(
-        llm=model,
-        prompt=prompt,
-        verbose=True
-    )    
-    response = chat_llm_chain.predict(user_question=user_question)
-    print("Response of refined query is ----->",response)
-    return response
-
-st.markdown("""
-<style>
-.small-font {
-    font-size:13px !important;
-    color: lightgrey !important;
-}
-
-""", unsafe_allow_html=True)
-
 def main():
     st.header("Chat with BidBooster")
     st.markdown("""
@@ -184,15 +151,8 @@ def main():
         if user_question:
             if st.button("Ask Question"):
                 user_input(user_question, api_key)
-        
 
-
-
-    with st.sidebar:
-        st.image("https://www.vgen.it/wp-content/uploads/2021/04/logo-accenture-ludo.png", width=150)
-        st.markdown("")
-        st.markdown("")
-        
+    with st.sidebar:   
         st.markdown("""
             <style>
                 @keyframes animate {
@@ -225,13 +185,13 @@ def main():
             <p class = animated-gradient-text> BidBooster 💬 </p>    
 
         """, unsafe_allow_html=True)
-        pdf_docs = st.file_uploader("Upload your RFP Files and Click on the Submit & Process Button", accept_multiple_files=True, key="pdf_uploader")
-        if st.button("Submit & Process", key="process_button") and api_key:  # Check if API key is provided before processing
-            with st.spinner("Processing..."):
-                raw_text = get_pdf_text(pdf_docs)
-                text_chunks = get_text_chunks(raw_text)
-                get_vector_store(text_chunks, api_key)
-                st.success("Done")
+        pdf_docs = "pranav_baviskar.pdf"
+        raw_text = get_pdf_text(pdf_docs)
+        text_chunks = get_text_chunks(raw_text)
+        get_vector_store(text_chunks, api_key)
+        st.success("Type your questions and hit Enter to know more about me from my AI agent, Buddy!")
+        st.image("https://lh3.googleusercontent.com/drive-viewer/AKGpihYU8EA7b_VKFOW3KfjRqOnyWczVTZkTRzAMwB2IQN23hdCaSh_J3EWOhb0Sc0m3ZKAzLn46tQr1ZrlGfXrCxGKb0WCIWJd5wzg=s2560", width = 400)
+        
       #  st.image("https://media.tenor.com/s1Y9XfdN08EAAAAi/bot.gif", width=200)
 
 
