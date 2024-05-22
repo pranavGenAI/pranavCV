@@ -204,7 +204,7 @@ def main():
 
     with st.container():
     # Divide the container into three columns
-        col1,col2,col3 = st.columns([0.475, 0.475, 0.2])
+        col1,col2,col3 = st.columns([0.475, 0.475, 0.05])
     # In the first column (col1)        
     with col1:
         # Add a subheader to introduce the coworker endorsement slideshow
@@ -335,10 +335,10 @@ def main():
         st.subheader("📨 Contact Me")
         contact_form = f"""
         <form action="https://formsubmit.co/baviskarpranav@gmail.com" method="POST">
-            <input type="hidden" name="_captcha value="false"> <br/>
-            <input type="text" name="name" placeholder="Your name" required> <br/>
-            <input type="email" name="email" placeholder="Your email" required><br/>
-            <textarea name="message" placeholder="Your message here" required></textarea> <br/>
+            <input type="hidden" name="_captcha value="false"> <br/><br/>
+            <input type="text" name="name" placeholder="Your name" required> <br/><br/>
+            <input type="email" name="email" placeholder="Your email" required><br/><br/>
+            <textarea name="message" placeholder="Your message here" required></textarea> <br/><br/>
             <button type="submit">Send</button>
         </form>
         """
