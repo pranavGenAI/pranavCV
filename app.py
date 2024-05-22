@@ -14,7 +14,7 @@ from langchain.chains import LLMChain
 import time
 
 st.set_page_config(page_title="Pranav Baviskar ", layout="wide",page_icon='🧑🏻‍💼')
-
+st.write(os.getcwd())
 st.markdown("""
     <style>
         @keyframes gradientAnimation {
@@ -185,7 +185,7 @@ def main():
             <p class = animated-gradient-text> BidBooster 💬 </p>    
 
         """, unsafe_allow_html=True)
-        pdf_docs = "/pranav_baviskar_cv.pdf"
+        pdf_docs = "pranav_baviskar_cv.pdf"
         raw_text = get_pdf_text(pdf_docs)
         text_chunks = get_text_chunks(raw_text)
         get_vector_store(text_chunks, api_key)
