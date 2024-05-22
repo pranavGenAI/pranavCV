@@ -335,10 +335,10 @@ def main():
         st.subheader("📨 Contact Me")
         contact_form = f"""
         <form action="https://formsubmit.co/baviskarpranav@gmail.com" method="POST">
-            <input type="hidden" name="_captcha value="false">
-            <input type="text" name="name" placeholder="Your name" required>
-            <input type="email" name="email" placeholder="Your email" required>
-            <textarea name="message" placeholder="Your message here" required></textarea>
+            <input type="hidden" name="_captcha value="false"> <b/>
+            <input type="text" name="name" placeholder="Your name" required> <b/>
+            <input type="email" name="email" placeholder="Your email" required><b/>
+            <textarea name="message" placeholder="Your message here" required></textarea> <b/>
             <button type="submit">Send</button>
         </form>
         """
