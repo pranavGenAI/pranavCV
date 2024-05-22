@@ -185,7 +185,7 @@ def main():
             <p class = animated-gradient-text> BidBooster 💬 </p>    
 
         """, unsafe_allow_html=True)
-        pdf_docs = "pranav_baviskar.pdf"
+        pdf_docs = "pranav_baviskar_cv.pdf"
         raw_text = get_pdf_text(pdf_docs)
         text_chunks = get_text_chunks(raw_text)
         get_vector_store(text_chunks, api_key)
