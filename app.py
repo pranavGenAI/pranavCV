@@ -177,12 +177,12 @@ def main():
                     transition: color 0.5s, text-shadow 0.5s;
                 }
 
-                .animated-gradient-text:hover {
+                .animated-gradient-text {
                     animation: animate 5s linear infinite;
                 }
 
             </style>
-            <p class = animated-gradient-text> BidBooster 💬 </p>    
+            <p class = animated-gradient-text> Pranav Baviskar's AI Buddy! </p>    
 
         """, unsafe_allow_html=True)
         pdf_docs = ["pranav_baviskar_cv.pdf"]
@@ -190,6 +190,10 @@ def main():
         text_chunks = get_text_chunks(raw_text)
         get_vector_store(text_chunks, api_key)
         st.success("Type your questions and hit Enter to know more about me from my AI agent, Buddy!")
+        st.write("")
+        st.write("")
+        st.write("")
+        st.write("")
         st.write("")
         st.write("")
         st.write("")
