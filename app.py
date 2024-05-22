@@ -160,7 +160,7 @@ def main():
             if st.button("Ask Question"):
                 user_input(user_question, api_key)
     
-    lottie_gif = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_x17ybolp.json")
+    lottie_gif = "https://i.gifer.com/74pZ.gif"
     full_name = "Pranav Kishor Baviskar"
 
     with st.container():
@@ -171,7 +171,7 @@ def main():
             st.write("")
             st.write("Hey there, I'm Pranav! I'm passionate about leveraging data and technology to drive meaningful insights and solutions in business. Check out my LinkedIn profile on https://www.linkedin.com/in/pranav-baviskar/")   
         with col2:
-            st_lottie(lottie_gif, height=280, key="data")
+            st.image(lottie_gif, width=280)
             
     
     with st.sidebar:   
