@@ -12,6 +12,7 @@ import os
 from langchain_community.vectorstores import FAISS
 from langchain.chains import LLMChain
 import time
+from streamlit_lottie import st_lottie
 
 st.set_page_config(page_title="Pranav Baviskar ", layout="wide",page_icon='🧑🏻‍💼')
 
@@ -101,6 +102,12 @@ def get_vector_store(text_chunks, api_key):
     vector_store = FAISS.from_texts(text_chunks, embedding=embeddings)
     vector_store.save_local("faiss_index")
 
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
 def get_conversational_chain():
     prompt_template = """
     You are Buddy, an AI assistant dedicated to assisting Pranav Baviskar in his job search by providing recruiters with relevant and concise information. 
@@ -133,8 +140,20 @@ def user_input(user_question, api_key):
     
     #Sample Example
     print('response is here......',response["output_text"])
-    st.write("BidBooster: ", response["output_text"])
-    #st.write("BidBooster: ", response["output_text"])
+    st.write("AI Buddy: ", response["output_text"])
+
+    lottie_gif = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_x17ybolp.json")
+    full_name = "Pranav Kishor Baviskar"
+
+    with st.container():
+        col1,col2 = st.columns([8,3])
+
+        with col1:
+            gradient('#FFD4DD','#000395','e0fbfc',f"Hi, I'm {full_name}👋", "Management Consultant at Accenture Strategy")
+            st.write("")
+            st.write("Hey there, I'm Pranav! I'm passionate about leveraging data and technology to drive meaningful insights and solutions in business. Check out my LinkedIn profile on https://www.linkedin.com/in/pranav-baviskar/")   
+        with col2:
+            st_lottie(lottie_gif, height=280, key="data")
 
 def main():
     st.header("Pranav's AI Agent")
@@ -146,7 +165,7 @@ def main():
     </style>
     """, unsafe_allow_html=True)
     user_question = st.text_input("Ask my AI buddy!", key="user_question")
-
+    
     if user_question and api_key:  # Ensure API key and user question are provided
         if user_question:
             if st.button("Ask Question"):
