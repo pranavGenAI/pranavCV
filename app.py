@@ -204,7 +204,7 @@ def main():
 
     with st.container():
     # Divide the container into three columns
-        col1,col2,col3 = st.columns([0.475, 0.475, 0.05])
+        col1,col2 = st.columns([0.475, 0.475])
     # In the first column (col1)        
     with col1:
         # Add a subheader to introduce the coworker endorsement slideshow
