@@ -169,13 +169,13 @@ def main():
     python_lottie = load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_2znxgjyt.json")
     java_lottie = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_zh6xtlj9.json")
     with st.container():
-    st.subheader('⚒️ Skills')
-    col1, col2 = st.columns([1, 1])
-    with col1:
-        st_lottie(python_lottie, height=70,width=70, key="python", speed=2.5)
-    with col2:
-        st_lottie(java_lottie, height=70,width=70, key="java", speed=4)
-        
+        st.subheader('⚒️ Skills')
+        col1, col2 = st.columns([1, 1])
+        with col1:
+            st_lottie(python_lottie, height=70,width=70, key="python", speed=2.5)
+        with col2:
+            st_lottie(java_lottie, height=70,width=70, key="java", speed=4)
+            
     with st.sidebar:   
         st.markdown("""
             <style>
