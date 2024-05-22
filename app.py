@@ -193,7 +193,7 @@ def main():
         st.write("")
         st.write("")
         st.write("")
-        st.image("https://lh3.googleusercontent.com/drive-viewer/AKGpihYU8EA7b_VKFOW3KfjRqOnyWczVTZkTRzAMwB2IQN23hdCaSh_J3EWOhb0Sc0m3ZKAzLn46tQr1ZrlGfXrCxGKb0WCIWJd5wzg=s2560", width = 100)
+        st.image("https://lh3.googleusercontent.com/drive-viewer/AKGpihYU8EA7b_VKFOW3KfjRqOnyWczVTZkTRzAMwB2IQN23hdCaSh_J3EWOhb0Sc0m3ZKAzLn46tQr1ZrlGfXrCxGKb0WCIWJd5wzg=s2560", width = 150)
         
       #  st.image("https://media.tenor.com/s1Y9XfdN08EAAAAi/bot.gif", width=200)
 
