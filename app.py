@@ -68,6 +68,7 @@ st.markdown("""
         Pranav Baviskar | Management Consultant @ Accenture Strategy
     </p>
 """, unsafe_allow_html=True)
+st.write("Hey there, I'm Pranav! I'm passionate about leveraging data and technology to drive meaningful insights and solutions in business. Check out my LinkedIn profile on https://www.linkedin.com/in/pranav-baviskar/")
 
 
 #st.image("https://media1.tenor.com/m/6o864GYN6wUAAAAC/interruption-sorry.gif", width=1000)
@@ -165,20 +166,16 @@ def main():
             if st.button("Ask Question"):
                 user_input(user_question, api_key)
     
-    lottie_gif = "https://i.gifer.com/74pZ.gif"
-    full_name = "Pranav Kishor Baviskar"
-
+    python_lottie = load_lottieurl("https://assets6.lottiefiles.com/packages/lf20_2znxgjyt.json")
+    java_lottie = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_zh6xtlj9.json")
     with st.container():
-        col1,col2 = st.columns([8,3])
-
-        with col1:
-            gradient('#6c028d','#760fb1','#FFFF',f"Hi, I'm {full_name}👋", "Management Consultant at Accenture Strategy")
-            st.write("")
-            st.write("Hey there, I'm Pranav! I'm passionate about leveraging data and technology to drive meaningful insights and solutions in business. Check out my LinkedIn profile on https://www.linkedin.com/in/pranav-baviskar/")   
-        with col2:
-            st.image(lottie_gif, width=280)
-            
-    
+    st.subheader('⚒️ Skills')
+    col1, col2 = st.columns([1, 1])
+    with col1:
+        st_lottie(python_lottie, height=70,width=70, key="python", speed=2.5)
+    with col2:
+        st_lottie(java_lottie, height=70,width=70, key="java", speed=4)
+        
     with st.sidebar:   
         st.markdown("""
             <style>
