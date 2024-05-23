@@ -222,11 +222,185 @@ def main():
     with st.container():
         st.markdown("""""")
         st.subheader('📌 Career Snapshot')
+        components.html(
+        f"""
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Styles for the slideshow -->
+        <style>
+            body{{
+                    background: #2e364a;
+                    font-family: sans-serif;
+                }}
+                .timeline{{                
+                    position: relative;
+                    max-width: 1200px;
+                    margin: 100px auto;
+                }}
+                .container{{
+                    padding: 10px 50px;
+                    position: relative;
+                    width: 40%;
+                    animation: movedown 1s linear forwards;
+                }}
+    
+                @keyframes movedown{{
+                    0%{{
+                        opacity: 1;
+                        transform: translateY(-30px);
+                    }}
+                    100%{{
+                        opacity: 1;
+                        transform: translateY(0px);
+                    }}
+                }}
+                
+                .text-box{{
+                    padding: 20px 30px;
+                    background: #fff;
+                    position: relative;
+                    border-radius: 6px;
+                    font-size: 15px;
+                }}
+                
+                .left-container{{
+                    left:0;
+                }}
+                .right-container{{
+                    left:50%;
+                }}
+                .container img{{
+                    position: absolute;
+                    width: 50px;
+                    border-radius: 50%;
+                    right: -45px;
+                    top: 52px;
+                    z-index: 10;
+                    height: 50px;
+                }}
+                .right-container img{{
+                    left:-25px;
+                }}
+                .timeline::after{{
+                    content: '';
+                    position: absolute;
+                    width: 6px;
+                    height: 100%;
+                    background: #fff;
+                    top: 0;
+                    left: 50%;
+                    margin-left: -3px;
+                    z-index: -1;
+                    animation: moveline 6s linear forwards;
+                }}
+                
+                @keyframes moveline{{
+                    0%{{
+                        height: 0;
+                    }}
+                    100%{{
+                        height: 100%;
+                    }}
+                }}
+                .text-box h2{{
+                    font-weight: 600;
+                }}
+                .text-box small{{
+                    display: inline-block;
+                    margin: 15px;
+                }}
+                .left-container-arrow{{
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    top: 50px;
+                    z-index: 1;
+                    border-top: 15px solid transparent;
+                    border-bottom: 15px solid transparent;
+                    border-left: 15px solid #fff;
+                    right: -14px;
+                }}
+                
+                .right-container-arrow{{
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    top: 50px;
+                    z-index: 1;
+                    border-top: 15px solid transparent;
+                    border-bottom: 15px solid transparent;
+                    border-right: 15px solid #fff;
+                    left: -14px;
+                }}
+                .container:nth-child(1){{
+                    animation-delay: 0s;  
+                }}
+                .container:nth-child(2){{
+                    animation-delay: 1s;
+                }}
+                .container:nth-child(3){{
+                    animation-delay: 2s;
+                }}
+                .container:nth-child(4){{
+                    animation-delay: 3s;   
+                }}
+            </style>
+       
+        </head>
+        <body>
+            <div class="timeline">
+                <div class="container left-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRx2CV_ivX4ndCD9iJkSxJEZCy6-h23DdC9luNcGvXgw&s">
+                    <div class="text-box">
+                        <h2> University of Pune </h2>
+                        <small> 2010-2014 </small>
+                        <p> Pranav, a distinguished merit scholar, earned his engineering degree in Electronics and Telecommunication (E&TC) from Pune University.</p>
+                        <span class="left-container-arrow"></span>
+                    </div>
+                </div>
+        
+                <div class="container right-container">
+                    <img src="https://asset.brandfetch.io/id44tJQbVE/idv_dYAgEY.jpeg">
+                    <div class="text-box">
+                        <h2> Accenture Technology </h2>
+                        <small> 2015-2017 </small>
+                        <p> After completing his engineering degree, Pranav joined the software service giant Accenture, where he worked as a software developer specializing in SQL, Mainframe, and Java.</p>
+                        <span class="right-container-arrow"></span>
+        
+                    </div>
+                </div>
+                <div class="container left-container">
+                    <img src="https://iimbg.ac.in/wp-content/uploads/2020/01/IIMBG_LOGO_With_Space-01-1-300x214.jpg">
+                    <div class="text-box">
+                        <h2> Indian Institute of Management, Bodh Gaya </h2>
+                        <small> 2017-2019 </small>
+                        <p> After gaining around two years of industry experience, Pranav aced the CAT exam and was selected for the MBA program at IIM Bodh Gaya. He completed the two-year program with a gold medal 🥇</p>
+                        <span class="left-container-arrow"></span>
+        
+                    </div>
+                </div>
+                <div class="container right-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwVCI1bU-FWO7jNoG3cHGkMtRSmoJDvsTqAIeqrRaplA&s">
+                    <div class="text-box">
+                        <h2> Business Consultant @ EY India </h2>
+                        <small> 2019-2022 </small>
+                        <p> Following his MBA, he secured a position as a business consultant with one of the prestigious Big 4 firms. At EY India, he spent approximately three years working on digital transformation and emerging technologysuch AI, data strategy, RPA, etc. initiatives</p>
+                        <span class="right-container-arrow"></span>
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html> 
+        """)
+        
     ################ Contact us and testimony ###########
 
     with st.container():
     # Divide the container into three columns
         col1,col2 = st.columns([0.475, 0.475])
+        
     # In the first column (col1)        
     with col1:
         # Add a subheader to introduce the coworker endorsement slideshow
