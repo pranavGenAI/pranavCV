@@ -358,8 +358,8 @@ def main():
         contact_form = f"""
         <form action="https://formsubmit.co/baviskarpranav@gmail.com" method="POST">
             <input type="hidden" name="_captcha value="false"> <br/><br/>
-            <input type="text" name="name" size="30" placeholder="   Your name" required> <br/><br/>
-            <input type="email" name="email" size="30" placeholder="   Your email" required><br/><br/>
+            <input type="text" name="name" size="60" placeholder="   Your name" required> <br/><br/>
+            <input type="email" name="email" size="60" placeholder="   Your email" required><br/><br/>
             <textarea name="message" rows="6" cols="50" placeholder="    Your message here" required></textarea> <br/><br/>
             <button type="submit">Send</button>
         </form>
