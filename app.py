@@ -579,8 +579,7 @@ def main():
         get_vector_store(text_chunks, api_key)
         st.success("Hi, Pranav Baviskar here! Type your questions and hit Enter to learn more about me from my AI Buddy!")
         # st.write("")
-        st.image("https://lh3.googleusercontent.com/drive-viewer/AKGpihaN9twxtZGZ9303NYYbk87F6WGulmang6b-4qw2ErmznnGfkP9Cxooo5zHbYZpSI3Jz8lFIL2qM8WGfLim0li6nw8L2WzKU8wM=s2560", width = 150)
-        
+        st.image("https://lh3.googleusercontent.com/drive-viewer/AKGpihYw04487Gzed5UbL_d4ZZP1oZ0xFdQkvvuKOTvE4p5NSMcYGWObJ_dYWchvk5ETIJ2SPD4849sIbofZcRxLC2pnYulbihsEMVE=s2560", width = 150)
       #  st.image("https://media.tenor.com/s1Y9XfdN08EAAAAi/bot.gif", width=200)
 
 
