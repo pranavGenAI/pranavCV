@@ -393,7 +393,7 @@ def main():
             </div>
         </body>
         </html> 
-        """, height=1400)
+        """, height=1300)
         
     ################ Contact us and testimony ###########
 
