@@ -287,15 +287,15 @@ def main():
             <!-- Slideshow container -->
             <div class="slideshow-container">
                 <div class="mySlides fade">
-                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYvnhZUcFmAqTBznySpPKbIunbjwGnhajUw_AbVddke4IVuq06iRtk0xqCkBlHZSIBDdqm48z_PLLm_5OcB6BO4PE8qgt-ug4g=s1600-rw-v1" style="width:100%">
+                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYvnhZUcFmAqTBznySpPKbIunbjwGnhajUw_AbVddke4IVuq06iRtk0xqCkBlHZSIBDdqm48z_PLLm_5OcB6BO4PE8qgt-ug4g=s1600-rw-v1" style="width:90%">
                 </div>
 
                 <div class="mySlides fade">
-                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbu9WR32WD6UH0abdND_jUOgMo5RtHloX4stGk23ey_-5gSmadVAJ7tppcyC0WXRZf-GAd1ZdJBsNDs3SLTFwgO2_gCo6yXjg=s1600-rw-v1" style="width:100%">
+                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbu9WR32WD6UH0abdND_jUOgMo5RtHloX4stGk23ey_-5gSmadVAJ7tppcyC0WXRZf-GAd1ZdJBsNDs3SLTFwgO2_gCo6yXjg=s1600-rw-v1" style="width:90%">
                 </div>
 
                 <div class="mySlides fade">
-                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZqSCizZomUX0pxMiyYhMsu2943IZB0CHhuxhKYoKw1uemeIkSDsRVZ3nVa1AVjWgwNQ_yV9cHWGq3dBPXA-KFLxKgfkVOmQFU=s1600-rw-v1" style="width:100%">
+                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZqSCizZomUX0pxMiyYhMsu2943IZB0CHhuxhKYoKw1uemeIkSDsRVZ3nVa1AVjWgwNQ_yV9cHWGq3dBPXA-KFLxKgfkVOmQFU=s1600-rw-v1" style="width:90%">
                 </div>
 
             </div>
@@ -357,9 +357,9 @@ def main():
         st.subheader("📨 Contact Me")
         contact_form = f"""
         <form action="https://formsubmit.co/baviskarpranav@gmail.com" method="POST">
-            <input type="hidden" name="_captcha value="false", size="8"> <br/><br/>
-            <input type="text" name="name" placeholder="   Your name" required> <br/><br/>
-            <input type="email" name="email" placeholder="   Your email" required><br/><br/>
+            <input type="hidden" name="_captcha value="false"> <br/><br/>
+            <input type="text" name="name" size="30" placeholder="   Your name" required> <br/><br/>
+            <input type="email" name="email" size="30" placeholder="   Your email" required><br/><br/>
             <textarea name="message" rows="6" cols="50" placeholder="    Your message here" required></textarea> <br/><br/>
             <button type="submit">Send</button>
         </form>
