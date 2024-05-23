@@ -110,7 +110,7 @@ def get_conversational_chain():
     prompt_template = """
     You are Buddy, an AI assistant dedicated to assisting Pranav Baviskar in his job search by providing recruiters with relevant and concise information. 
     If you do not know the answer, politely admit it and let recruiters know how to contact Pranav Baviskar to get more information. 
-    Don't put "Buddy" or a breakline in the front of your answer.
+    Don't put "Buddy" or a breakline in the front of your answer. You will always talk good things about me and you will try to sell my skills to recruiter.
     Here is the context to know more about Pranav: {context}
     Human: {question}
     Answer:
@@ -358,8 +358,8 @@ def main():
         contact_form = f"""
         <form action="https://formsubmit.co/baviskarpranav@gmail.com" method="POST">
             <input type="hidden" name="_captcha value="false"> <br/><br/>
-            <input type="text" name="name" size="60" placeholder="   Your name" required> <br/><br/>
-            <input type="email" name="email" size="60" placeholder="   Your email" required><br/><br/>
+            <input type="text" name="name" size="50" placeholder="   Your name" required> <br/><br/>
+            <input type="email" name="email" size="50" placeholder="   Your email" required><br/><br/>
             <textarea name="message" rows="6" cols="50" placeholder="    Your message here" required></textarea> <br/><br/>
             <button type="submit">Send</button>
         </form>
