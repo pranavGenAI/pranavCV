@@ -231,7 +231,6 @@ def main():
         <!-- Styles for the slideshow -->
         <style>
             body{{
-                    background: #2e364a;
                     font-family: sans-serif;
                 }}
                 .timeline{{                
