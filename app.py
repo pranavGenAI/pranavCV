@@ -360,7 +360,7 @@ def main():
             <input type="hidden" name="_captcha value="false", size="8"> <br/><br/>
             <input type="text" name="name" placeholder="   Your name" required> <br/><br/>
             <input type="email" name="email" placeholder="   Your email" required><br/><br/>
-            <textarea name="message" placeholder="    Your message here" required></textarea> <br/><br/>
+            <textarea name="message" rows="6" cols="50" placeholder="    Your message here" required></textarea> <br/><br/>
             <button type="submit">Send</button>
         </form>
         """
