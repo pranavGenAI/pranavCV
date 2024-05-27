@@ -213,7 +213,6 @@ st.components.v1.html(particle_html, height=1000)
 st.markdown("""
 <style>
     iframe {
-        position: fixed;
         left: 0;
         right: 0;
         top: 0;
