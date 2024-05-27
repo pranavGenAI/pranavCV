@@ -17,6 +17,7 @@ from streamlit_lottie import st_lottie
 import requests
 st.set_page_config(page_title="Pranav Baviskar ", layout="wide",page_icon='🧑🏻‍💼')
 
+# HTML for particles animation
 particle_html = """
 <!DOCTYPE html>
 <html lang="en">
@@ -151,10 +152,10 @@ particle_html = """
 </html>
 """
 
-# Embed the HTML code into the Streamlit app
+# Embed the particles animation HTML into the Streamlit app
 st.components.v1.html(particle_html, height=1000)
 
-# Add CSS to make the iframe fullscreen for this specific iframe only
+# CSS to make the iframe fullscreen
 st.markdown("""
 <style>
     .iframe {
@@ -169,7 +170,6 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
-
 
 
 st.write("Hey there, I'm Pranav! I'm passionate about leveraging data and technology to drive meaningful insights and solutions in business. Check out my LinkedIn profile on https://www.linkedin.com/in/pranav-baviskar/")
