@@ -570,7 +570,7 @@ def main():
                 }
 
             </style>
-            <p> Pranav Baviskar CV! </p>    
+            <p class = animated-gradient-text> Pranav Baviskar CV! </p>    
 
         """, unsafe_allow_html=True)
         pdf_docs = ["pranav_baviskar_cv.pdf"]
