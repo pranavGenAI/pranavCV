@@ -17,7 +17,6 @@ from streamlit_lottie import st_lottie
 import requests
 st.set_page_config(page_title="Pranav Baviskar ", layout="wide",page_icon='🧑🏻‍💼')
 
-
 particle_html = """
 <!DOCTYPE html>
 <html lang="en">
