@@ -216,9 +216,9 @@ st.markdown("""
         left: 0;
         right: 0;
         top: 0;
-        bottom: 0;
+        bottom: 1000;
         border: none;
-        height: 500%;
+        height: 100%;
         width: 100%;
     }
 </style>
