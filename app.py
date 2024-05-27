@@ -210,19 +210,7 @@ particle_html = """
 st.components.v1.html(particle_html, height=1000)
 
 # Add CSS to make the iframe fullscreen
-st.markdown("""
-<style>
-    iframe {
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 1000;
-        border: none;
-        height: 100%;
-        width: 100%;
-    }
-</style>
-""", unsafe_allow_html=True)
+
 
 
 st.write("Hey there, I'm Pranav! I'm passionate about leveraging data and technology to drive meaningful insights and solutions in business. Check out my LinkedIn profile on https://www.linkedin.com/in/pranav-baviskar/")
