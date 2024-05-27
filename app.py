@@ -571,8 +571,6 @@ if __name__ == "__main__":
 
     </style>''', unsafe_allow_html=True)
 
-    
-        
     particle_html = """
     <!DOCTYPE html>
     <html lang="en">
@@ -710,10 +708,10 @@ if __name__ == "__main__":
     # Embed the HTML code into the Streamlit app
     st.components.v1.html(particle_html, height=1000)
     
-    # Add CSS to make the iframe fullscreen
+    # Add CSS to make the iframe fullscreen for this specific iframe only
     st.markdown("""
     <style>
-        iframe {
+        .streamlit-iframe {
             position: fixed;
             left: 0;
             right: 0;
@@ -725,5 +723,6 @@ if __name__ == "__main__":
         }
     </style>
     """, unsafe_allow_html=True)
+
 
     main()
