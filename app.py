@@ -157,7 +157,7 @@ st.components.v1.html(particle_html, height=1000)
 # Add CSS to make the iframe fullscreen for this specific iframe only
 st.markdown("""
 <style>
-    .streamlit-iframe {
+    .iframe {
         position: fixed;
         left: 0;
         right: 0;
