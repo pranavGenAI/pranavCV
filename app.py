@@ -100,31 +100,11 @@ st.markdown("""
 
 """, unsafe_allow_html=True)
 
-
-
-        # Embed an HTML component to display the slideshow
-components.html(
-        f"""
-        <!DOCTYPE html>
-        <html>
-
-        <body>
-            <!-- Slideshow container -->
-            <div>
-                <div>
-                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZa3f_QQspr5DQ1d19xkEeL650XKDRc8Mngt6KOHh8NAlVne-WTCoDmUCL2zIvk_xlUcDXwrONc1NtVqL-kQ9umaKy_6bdaaww=s1600-rw-v1" class="glow-on-hover">
-                </div>
-
-            </div>
-
-        </body>
-        </html> 
-
-            """,
-                height=270,
-)  
-
-
+st.markdown("""
+        <a href="https://reportwhiz.streamlit.app/">
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZa3f_QQspr5DQ1d19xkEeL650XKDRc8Mngt6KOHh8NAlVne-WTCoDmUCL2zIvk_xlUcDXwrONc1NtVqL-kQ9umaKy_6bdaaww=s1600-rw-v1" class="glow-on-hover" height=350 width=450>
+        </a>
+""", unsafe_allow_html=True)
 
 
 
