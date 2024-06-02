@@ -224,7 +224,7 @@ def main():
                     left: 50%;
                     margin-left: -3px;
                     z-index: -1;
-                    animation: moveline 6s linear forwards;
+                    animation: moveline 10s linear forwards;
                 }}
                 
                 @keyframes moveline{{
@@ -250,7 +250,7 @@ def main():
                     z-index: 1;
                     border-top: 15px solid transparent;
                     border-bottom: 15px solid transparent;
-                    border-left: 15px solid #fff;
+                    border-left: 15px solid rgba(0, 0, 0, 0.4);
                     right: -14px;
                 }}
                 
