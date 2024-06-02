@@ -237,7 +237,7 @@ def main():
                 }}
                 .text-box h2{{
                     font-weight: 600;
-		    background: rgba(255, 255, 255, 0.7);
+		    color: rgba(255, 255, 255, 0.7);
                 }}
                 .text-box small{{
                     display: inline-block;
