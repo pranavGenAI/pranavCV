@@ -190,7 +190,7 @@ def main():
                 
                 .text-box{{
                     padding: 20px 30px;
-                    background: rgba(0, 0, 0, 0.4); 
+                    background: rgba(255, 255, 255, 0.4); 
 		    color: rgba(255, 255, 255, 0.7);
                     position: relative;
                     border-radius: 6px;
@@ -220,7 +220,7 @@ def main():
                     position: absolute;
                     width: 6px;
                     height: 100%;
-		    background: rgba(0, 0, 0, 0.4); /* Adjust the transparency as needed */
+		    background: rgba(255, 255, 255, 0.4); /* Adjust the transparency as needed */
                     top: 0;
                     left: 50%;
                     margin-left: -3px;
@@ -253,7 +253,7 @@ def main():
                     z-index: 1;
                     border-top: 15px solid transparent;
                     border-bottom: 15px solid transparent;
-                    border-left: 15px solid rgba(0, 0, 0, 0.4);
+                    border-left: 15px solid rgba(255, 255, 255, 0.4); ;
                     right: -14px;
                 }}
                 
@@ -265,7 +265,7 @@ def main():
                     z-index: 1;
                     border-top: 15px solid transparent;
                     border-bottom: 15px solid transparent;
-                    border-right: 15px solid rgba(0, 0, 0, 0.4);
+                    border-right: 15px solid rgba(255, 255, 255, 0.4); ;
                     left: -14px;
                 }}
                 .container:nth-child(1){{
