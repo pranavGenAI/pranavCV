@@ -16,6 +16,7 @@ import time
 from streamlit_lottie import st_lottie
 import requests
 st.set_page_config(page_title="Pranav Baviskar ", layout="wide",page_icon='🧑🏻‍💼')
+st.image("Galactice.png", width=400)  # Adjust the image URL and width as needed
 
 video_html = """
 		<style>
