@@ -237,6 +237,7 @@ def main():
                 }}
                 .text-box h2{{
                     font-weight: 600;
+		    background: rgba(255, 255, 255, 0.7);
                 }}
                 .text-box small{{
                     display: inline-block;
@@ -435,15 +436,7 @@ def main():
 
             /* On smaller screens, decrease text size */
             @media only screen and (max-width: 300px) {{
-            .text {{font-size: 11px
-	    padding: 20px 30px;
-	    background: rgba(255, 255, 255, 0.7);
-	    position: relative;
-	    border-radius: 6px;
-	    font-size: 15px;
-	    color: white; /* Set font color to white */
-
-	    }}
+            .text {{font-size: 11px}}
             }}
             </style>
         </head>
