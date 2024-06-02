@@ -31,7 +31,7 @@ video_html = """
 		.content {
 		  position: fixed;
 		  bottom: 0;
-		  background: rgba(255, 255, 255, 0.4); /* Adjust the transparency as needed */
+		  background: rgba(255, 255, 255, 0.2); /* Adjust the transparency as needed */
 		  color: #f1f1f1;
 		  width: 100%;
 		  padding: 20px;
@@ -190,7 +190,7 @@ def main():
                 
                 .text-box{{
                     padding: 20px 30px;
-                    background: rgba(255, 255, 255, 0.4); 
+                    background: rgba(255, 255, 255, 0.2); 
 		    color: rgba(255, 255, 255, 0.7);
                     position: relative;
                     border-radius: 6px;
@@ -220,7 +220,7 @@ def main():
                     position: absolute;
                     width: 6px;
                     height: 100%;
-		    background: rgba(255, 255, 255, 0.4); /* Adjust the transparency as needed */
+		    background: rgba(255, 255, 255, 0.2); /* Adjust the transparency as needed */
                     top: 0;
                     left: 50%;
                     margin-left: -3px;
