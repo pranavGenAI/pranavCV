@@ -17,6 +17,35 @@ from streamlit_lottie import st_lottie
 import requests
 st.set_page_config(page_title="Pranav Baviskar ", layout="wide",page_icon='🧑🏻‍💼')
 
+video_html = """
+		<style>
+		#myVideo {
+		  position: fixed;
+		  right: 0;
+		  bottom: 0;
+		  min-width: 100%; 
+		  min-height: 100%;
+		  filter: brightness(40%); /* Adjust the brightness to make the video darker */
+		}
+		
+		.content {
+		  position: fixed;
+		  bottom: 0;
+		  background: rgba(0, 0, 0, 0.5); /* Adjust the transparency as needed */
+		  color: #f1f1f1;
+		  width: 100%;
+		  padding: 20px;
+		}
+		</style>	
+		<video autoplay muted loop id="myVideo">
+		  <source src="https://assets.mixkit.co/videos/22729/22729-720.mp4" type="video/mp4">
+		  Your browser does not support HTML5 video.
+		</video>
+		"""
+
+st.markdown(video_html, unsafe_allow_html=True)
+
+
 # HTML for particles animation
 
 st.write("Hey there, I'm Pranav! I'm passionate about leveraging data and technology to drive meaningful insights and solutions in business. Check out my LinkedIn profile on https://www.linkedin.com/in/pranav-baviskar/")
@@ -109,10 +138,7 @@ def main():
     input {
       border-radius: 15px;
     }
-    input[type="text"] {
-        background-color: rgba(255, 255, 255, 0.5); /* Change the last value (0.5) to adjust transparency */
-        border-radius: 15px;
-    }
+ 
     </style>
     """, unsafe_allow_html=True)
     user_question = st.text_input("Ask my AI buddy!", key="user_question")
