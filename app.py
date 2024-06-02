@@ -17,7 +17,7 @@ from streamlit_lottie import st_lottie
 import requests
 st.set_page_config(page_title="Pranav Baviskar ", layout="wide",page_icon='🧑🏻‍💼')
 
-st.image("./Galactice.png", width=400)  # Adjust the image URL and width as needed
+st.image("https://lh3.googleusercontent.com/drive-viewer/AKGpihaglLRfUCZ4Oxzxa_fPNlGgWOR4qbN8GLe7_ygk7FXr0VSkG49wUCAW1o6r8TdgX5Bbelxk-HqITG-c9_xp3hPVDHrJDI8V-Bw=s1600-rw-v1", width=400)  # Adjust the image URL and width as needed
 
 video_html = """
 		<style>
