@@ -109,6 +109,19 @@ def main():
     input {
       border-radius: 15px;
     }
+    input[type="text"] {
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #fff; /* Add a border for visibility */
+            color: #fff; /* Text color */
+            font-size: 16px; /* Font size */
+            padding: 5px; /* Add padding */
+            width: 100%; /* Set width to fill the container */
+    }
+    input[type="text"]:focus {
+            outline: none; /* Remove default focus outline */
+            border-color: #03bcf4; /* Change border color on focus */
+    }
     </style>
     """, unsafe_allow_html=True)
     user_question = st.text_input("Ask my AI buddy!", key="user_question")
