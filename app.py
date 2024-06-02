@@ -237,11 +237,12 @@ def main():
                 }}
                 .text-box h2{{
                     font-weight: 600;
-		    color: rgba(255, 255, 255, 0.7);
+		    color: rgba(255, 255, 255, 0.8);
                 }}
                 .text-box small{{
                     display: inline-block;
                     margin: 15px;
+		    color: rgba(255, 255, 255, 0.7);
                 }}
                 .left-container-arrow{{
                     height: 0;
