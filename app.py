@@ -18,31 +18,6 @@ import requests
 st.set_page_config(page_title="Pranav Baviskar ", layout="wide",page_icon='🧑🏻‍💼')
 
 
-st.subheader("🎖️ Coworker Endorsements")
-        # Embed an HTML component to display the slideshow
-components.html(
-        f"""
-        <!DOCTYPE html>
-        <html>
-        <body>
-            <!-- Slideshow container -->
-            <div>
-                <div>
-                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaglLRfUCZ4Oxzxa_fPNlGgWOR4qbN8GLe7_ygk7FXr0VSkG49wUCAW1o6r8TdgX5Bbelxk-HqITG-c9_xp3hPVDHrJDI8V-Bw=s1600-rw-v1">
-                </div>
-
-            </div>
-
-        </body>
-        </html> 
-
-            """,
-                height=270,
-)  
-
-
-
-
 video_html = """
 		<style>
 		#myVideo {
@@ -75,6 +50,33 @@ st.markdown(video_html, unsafe_allow_html=True)
 # HTML for particles animation
 
 st.write("Hey there, I'm Pranav! I'm passionate about leveraging data and technology to drive meaningful insights and solutions in business. Check out my LinkedIn profile on https://www.linkedin.com/in/pranav-baviskar/")
+
+
+
+st.subheader("Galectic")
+        # Embed an HTML component to display the slideshow
+components.html(
+        f"""
+        <!DOCTYPE html>
+        <html>
+        <body>
+            <!-- Slideshow container -->
+            <div>
+                <div>
+                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaglLRfUCZ4Oxzxa_fPNlGgWOR4qbN8GLe7_ygk7FXr0VSkG49wUCAW1o6r8TdgX5Bbelxk-HqITG-c9_xp3hPVDHrJDI8V-Bw=s1600-rw-v1">
+                </div>
+
+            </div>
+
+        </body>
+        </html> 
+
+            """,
+                height=270,
+)  
+
+
+
 
 
 #st.image("https://media1.tenor.com/m/6o864GYN6wUAAAAC/interruption-sorry.gif", width=1000)
