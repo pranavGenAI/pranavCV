@@ -63,7 +63,7 @@ components.html(
             <!-- Slideshow container -->
             <div>
                 <div>
-                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaglLRfUCZ4Oxzxa_fPNlGgWOR4qbN8GLe7_ygk7FXr0VSkG49wUCAW1o6r8TdgX5Bbelxk-HqITG-c9_xp3hPVDHrJDI8V-Bw=s1600-rw-v1">
+                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZa3f_QQspr5DQ1d19xkEeL650XKDRc8Mngt6KOHh8NAlVne-WTCoDmUCL2zIvk_xlUcDXwrONc1NtVqL-kQ9umaKy_6bdaaww=s1600-rw-v1">
                 </div>
 
             </div>
