@@ -110,8 +110,8 @@ def main():
       border-radius: 15px;
     }
 
-   /* Transparent input text box */
-    .stTextInput > div > div > div {
+    /* Transparent input text box */
+    #textInputRootElement > div > div > div {
         background-color: rgba(0, 0, 0, 0.5) !important; /* 50% transparent black */
         border: none !important;
         border-bottom: 2px solid rgba(255, 255, 255, 0.5) !important; /* 50% transparent white */
@@ -122,11 +122,11 @@ def main():
         box-shadow: none !important; /* Remove shadow */
     }
     /* Placeholder text color */
-    .stTextInput > div > div > div::placeholder {
+    #textInputRootElement > div > div > div::placeholder {
         color: rgba(255, 255, 255, 0.7) !important; /* 70% transparent white */
     }
     /* Focused state */
-    .stTextInput > div > div > div:focus {
+    #textInputRootElement > div > div > div:focus {
         outline: none !important;
         border-color: #03bcf4 !important; /* Change border color on focus */
     }
