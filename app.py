@@ -93,7 +93,7 @@ st.markdown("""
             }
 
             .glow-on-hover:hover {
-                transform: scale(1.15);
+                transform: scale(1.1);
                 filter: drop-shadow(0 0 10px rgba(197, 45, 243, 0.8));
             }
         </style>
@@ -102,7 +102,7 @@ st.markdown("""
 
 st.markdown("""
         <a href="https://interactive.convai.com/character-id=e4c3a900-2092-11ef-9459-42010a7be00e">
-            <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZa3f_QQspr5DQ1d19xkEeL650XKDRc8Mngt6KOHh8NAlVne-WTCoDmUCL2zIvk_xlUcDXwrONc1NtVqL-kQ9umaKy_6bdaaww=s1600-rw-v1" class="glow-on-hover" height=450 width=1000>
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZa3f_QQspr5DQ1d19xkEeL650XKDRc8Mngt6KOHh8NAlVne-WTCoDmUCL2zIvk_xlUcDXwrONc1NtVqL-kQ9umaKy_6bdaaww=s1600-rw-v1" class="glow-on-hover" height=250 width=1500>
         </a>
 """, unsafe_allow_html=True)
 
