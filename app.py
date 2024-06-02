@@ -18,7 +18,7 @@ import requests
 st.set_page_config(page_title="Pranav Baviskar ", layout="wide",page_icon='🧑🏻‍💼')
 
 
-video_html = """
+video_html = f"""
 		<style>
 		#myVideo {
 		  position: fixed;
