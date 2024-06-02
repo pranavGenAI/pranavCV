@@ -101,8 +101,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown("""
-        <a href="https://reportwhiz.streamlit.app/">
-            <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZa3f_QQspr5DQ1d19xkEeL650XKDRc8Mngt6KOHh8NAlVne-WTCoDmUCL2zIvk_xlUcDXwrONc1NtVqL-kQ9umaKy_6bdaaww=s1600-rw-v1" class="glow-on-hover" height=350 width=450>
+        <a href="https://interactive.convai.com/character-id=e4c3a900-2092-11ef-9459-42010a7be00e">
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZa3f_QQspr5DQ1d19xkEeL650XKDRc8Mngt6KOHh8NAlVne-WTCoDmUCL2zIvk_xlUcDXwrONc1NtVqL-kQ9umaKy_6bdaaww=s1600-rw-v1" class="glow-on-hover">
         </a>
 """, unsafe_allow_html=True)
 
