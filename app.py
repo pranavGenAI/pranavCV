@@ -198,7 +198,7 @@ def main():
                 }}
                 
                 .left-container{{
-                    left:10;
+                    left:50%;
                 }}
                 .right-container{{
                     left:50%;
