@@ -101,9 +101,11 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown("""
+	<div style="text-align: center;">
         <a href="https://interactive.convai.com/character-id=e4c3a900-2092-11ef-9459-42010a7be00e">
             <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZa3f_QQspr5DQ1d19xkEeL650XKDRc8Mngt6KOHh8NAlVne-WTCoDmUCL2zIvk_xlUcDXwrONc1NtVqL-kQ9umaKy_6bdaaww=s1600-rw-v1" class="glow-on-hover" height=290 width=1300>
         </a>
+	</div>
 """, unsafe_allow_html=True)
 
 
