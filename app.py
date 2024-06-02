@@ -219,7 +219,7 @@ def main():
                     position: absolute;
                     width: 6px;
                     height: 100%;
-                    background: #fff;
+                    background: 15px solid rgba(0, 0, 0, 0.5);
                     top: 0;
                     left: 50%;
                     margin-left: -3px;
@@ -262,7 +262,7 @@ def main():
                     z-index: 1;
                     border-top: 15px solid transparent;
                     border-bottom: 15px solid transparent;
-                    border-right: 15px solid #fff;
+                    border-right: 15px solid rgba(0, 0, 0, 0.4);
                     left: -14px;
                 }}
                 .container:nth-child(1){{
