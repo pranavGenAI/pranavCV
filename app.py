@@ -219,7 +219,7 @@ def main():
                     position: absolute;
                     width: 6px;
                     height: 100%;
-                    background: 15px solid rgba(0, 0, 0, 0.5);
+		    background: rgba(0, 0, 0, 0.4); /* Adjust the transparency as needed */
                     top: 0;
                     left: 50%;
                     margin-left: -3px;
