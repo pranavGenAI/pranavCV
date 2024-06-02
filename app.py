@@ -110,11 +110,11 @@ def main():
       border-radius: 15px;
     }
 
-       /* Transparent input text box */
+   /* Transparent input text box */
     .stTextInput > div > div > div {
-        background-color: transparent !important;
+        background-color: rgba(0, 0, 0, 0.5) !important; /* 50% transparent black */
         border: none !important;
-        border-bottom: 2px solid #03bcf4 !important; /* Bottom border color */
+        border-bottom: 2px solid rgba(255, 255, 255, 0.5) !important; /* 50% transparent white */
         color: #fff !important; /* Text color */
         font-size: 16px !important; /* Font size */
         padding: 10px 12px !important; /* Padding */
@@ -123,7 +123,7 @@ def main():
     }
     /* Placeholder text color */
     .stTextInput > div > div > div::placeholder {
-        color: #d3d3d3 !important;
+        color: rgba(255, 255, 255, 0.7) !important; /* 70% transparent white */
     }
     /* Focused state */
     .stTextInput > div > div > div:focus {
