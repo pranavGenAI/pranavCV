@@ -174,6 +174,7 @@ def main():
                     position: relative;
                     width: 40%;
                     animation: movedown 1s linear forwards;
+		    background-color: rgba(255, 255, 255, 0.8); /* Adjust the last value (0.5) to change transparency */
                 }}
     
                 @keyframes movedown{{
