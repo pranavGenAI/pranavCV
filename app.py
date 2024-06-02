@@ -224,7 +224,7 @@ def main():
                     left: 50%;
                     margin-left: -3px;
                     z-index: -1;
-                    animation: moveline 10s linear forwards;
+                    animation: moveline 6s linear forwards;
                 }}
                 
                 @keyframes moveline{{
@@ -435,7 +435,15 @@ def main():
 
             /* On smaller screens, decrease text size */
             @media only screen and (max-width: 300px) {{
-            .text {{font-size: 11px}}
+            .text {{font-size: 11px
+	    padding: 20px 30px;
+	    background: rgba(255, 255, 255, 0.7);
+	    position: relative;
+	    border-radius: 6px;
+	    font-size: 15px;
+	    color: white; /* Set font color to white */
+
+	    }}
             }}
             </style>
         </head>
