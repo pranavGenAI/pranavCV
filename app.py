@@ -190,7 +190,7 @@ def main():
                 
                 .text-box{{
                     padding: 20px 30px;
-                    background: rgba(0, 0, 0, 0.2); 
+                    background: rgba(0, 0, 0, 0.3); 
                     position: relative;
                     border-radius: 6px;
                     font-size: 15px;
