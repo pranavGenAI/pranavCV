@@ -18,7 +18,7 @@ import requests
 st.set_page_config(page_title="Pranav Baviskar ", layout="wide",page_icon='🧑🏻‍💼')
 
 
-video_html = f"""
+video_html = """
 		<style>
 		#myVideo {
 		  position: fixed;
@@ -37,44 +37,6 @@ video_html = f"""
 		  width: 100%;
 		  padding: 20px;
 		}
-	         @keyframes gradientAnimation {
-	                0% { background-position: 0% 50%; }
-	                50% { background-position: 100% 50%; }
-	                100% { background-position: 0% 50%; }
-	            }
-	
-	         .animated-gradient-text {
-	                font-family: "Graphik Semibold";
-	                font-size: 42px;
-	                background: linear-gradient(45deg, rgb(245, 58, 126) 30%, rgb(200, 1, 200) 55%, rgb(197, 45, 243) 20%);
-	                background-size: 300% 200%;
-	                -webkit-background-clip: text;
-	                -webkit-text-fill-color: transparent;
-	                animation: gradientAnimation 6s ease-in-out infinite;
-	                color: #FFF;
-	                transition: color 0.5s, text-shadow 0.5s;
-	            }
-	
-	         @keyframes glow {
-	                0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
-	                    color: #0e3742;
-	                    text-shadow: none;
-	                }
-	                18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
-	                    color: #fff;
-	                    text-shadow: 0 0 10px rgb(197, 45, 243), 0 0 20px rgb(197, 45, 243);
-	                }
-	         }
-	
-	
-	         .glow-on-hover {
-	                transition: transform 0.5s, filter 0.3s;
-	         }
-	
-	         .glow-on-hover:hover {
-	                transform: scale(1.15);
-	                filter: drop-shadow(0 0 10px rgba(197, 45, 243, 0.8));
-	         }
 	        
 		</style>
 		<video autoplay muted loop id="myVideo">
