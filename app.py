@@ -109,26 +109,9 @@ def main():
     input {
       border-radius: 15px;
     }
-
-    /* Transparent input text box */
-    #textInputRootElement > div > div > div {
-        background-color: rgba(0, 0, 0, 0.5) !important; /* 50% transparent black */
-        border: none !important;
-        border-bottom: 2px solid rgba(255, 255, 255, 0.5) !important; /* 50% transparent white */
-        color: #fff !important; /* Text color */
-        font-size: 16px !important; /* Font size */
-        padding: 10px 12px !important; /* Padding */
-        border-radius: 8px !important; /* Border radius */
-        box-shadow: none !important; /* Remove shadow */
-    }
-    /* Placeholder text color */
-    #textInputRootElement > div > div > div::placeholder {
-        color: rgba(255, 255, 255, 0.7) !important; /* 70% transparent white */
-    }
-    /* Focused state */
-    #textInputRootElement > div > div > div:focus {
-        outline: none !important;
-        border-color: #03bcf4 !important; /* Change border color on focus */
+    input[type="text"] {
+        background-color: rgba(255, 255, 255, 0.5); /* Change the last value (0.5) to adjust transparency */
+        border-radius: 15px;
     }
     </style>
     """, unsafe_allow_html=True)
