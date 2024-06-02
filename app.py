@@ -109,18 +109,26 @@ def main():
     input {
       border-radius: 15px;
     }
-    input[type="text"] {
-            background-color: transparent;
-            border: none;
-            border-bottom: 2px solid #fff; /* Add a border for visibility */
-            color: #fff; /* Text color */
-            font-size: 16px; /* Font size */
-            padding: 5px; /* Add padding */
-            width: 100%; /* Set width to fill the container */
+
+       /* Transparent input text box */
+    .stTextInput > div > div > div {
+        background-color: transparent !important;
+        border: none !important;
+        border-bottom: 2px solid #03bcf4 !important; /* Bottom border color */
+        color: #fff !important; /* Text color */
+        font-size: 16px !important; /* Font size */
+        padding: 10px 12px !important; /* Padding */
+        border-radius: 8px !important; /* Border radius */
+        box-shadow: none !important; /* Remove shadow */
     }
-    input[type="text"]:focus {
-            outline: none; /* Remove default focus outline */
-            border-color: #03bcf4; /* Change border color on focus */
+    /* Placeholder text color */
+    .stTextInput > div > div > div::placeholder {
+        color: #d3d3d3 !important;
+    }
+    /* Focused state */
+    .stTextInput > div > div > div:focus {
+        outline: none !important;
+        border-color: #03bcf4 !important; /* Change border color on focus */
     }
     </style>
     """, unsafe_allow_html=True)
