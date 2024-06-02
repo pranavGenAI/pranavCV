@@ -17,7 +17,31 @@ from streamlit_lottie import st_lottie
 import requests
 st.set_page_config(page_title="Pranav Baviskar ", layout="wide",page_icon='🧑🏻‍💼')
 
-st.image("https://lh3.googleusercontent.com/drive-viewer/AKGpihaglLRfUCZ4Oxzxa_fPNlGgWOR4qbN8GLe7_ygk7FXr0VSkG49wUCAW1o6r8TdgX5Bbelxk-HqITG-c9_xp3hPVDHrJDI8V-Bw=s1600-rw-v1", width=400)  # Adjust the image URL and width as needed
+
+st.subheader("🎖️ Coworker Endorsements")
+        # Embed an HTML component to display the slideshow
+components.html(
+        f"""
+        <!DOCTYPE html>
+        <html>
+        <body>
+            <!-- Slideshow container -->
+            <div>
+                <div>
+                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaglLRfUCZ4Oxzxa_fPNlGgWOR4qbN8GLe7_ygk7FXr0VSkG49wUCAW1o6r8TdgX5Bbelxk-HqITG-c9_xp3hPVDHrJDI8V-Bw=s1600-rw-v1">
+                </div>
+
+            </div>
+
+        </body>
+        </html> 
+
+            """,
+                height=270,
+)  
+
+
+
 
 video_html = """
 		<style>
