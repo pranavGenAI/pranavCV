@@ -517,9 +517,7 @@ def main():
                     transition: color 0.5s, text-shadow 0.5s;
                 }
 
-                .animated-gradient-text {
-                    animation: animate 5s linear infinite;
-                }
+         
 
             </style>
             <p class = animated-gradient-text> Pranav Baviskar CV! </p>    
