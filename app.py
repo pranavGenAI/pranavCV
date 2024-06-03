@@ -16,7 +16,6 @@ import time
 from streamlit_lottie import st_lottie
 import requests
 st.set_page_config(page_title="Pranav Baviskar ", layout="wide",page_icon='🧑🏻‍💼')
-st.header('Pranav Baviskar CV | Management Consultant | AI Enthusiast')
 
 video_html = """
 		<style>
@@ -49,6 +48,7 @@ st.markdown(video_html, unsafe_allow_html=True)
 
 
 # HTML for particles animation
+st.header('Pranav Baviskar CV | Management Consultant | AI Enthusiast')
 
 st.write("Hey there, I'm Pranav! I'm passionate about leveraging data and technology to drive meaningful insights and solutions in business. Check out my LinkedIn profile on https://www.linkedin.com/in/pranav-baviskar/")
 
