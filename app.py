@@ -200,7 +200,7 @@ def main():
  
     </style>
     """, unsafe_allow_html=True)
-    user_question = st.text_input("Ask my AI buddy!", key="user_question")
+    user_question = st.text_input("Type your questions and hit Enter to learn more about me from my AI Buddy!", key="user_question")
     
     if user_question and api_key:  # Ensure API key and user question are provided
         if user_question:
@@ -621,10 +621,10 @@ def main():
         raw_text = get_pdf_text(pdf_docs)
         text_chunks = get_text_chunks(raw_text)
         get_vector_store(text_chunks, api_key)
-        st.success("Hi, Pranav Baviskar here! Type your questions and hit Enter to learn more about me from my AI Buddy!")
-        # st.write("")
-        st.image("https://lh3.googleusercontent.com/drive-viewer/AKGpihYw04487Gzed5UbL_d4ZZP1oZ0xFdQkvvuKOTvE4p5NSMcYGWObJ_dYWchvk5ETIJ2SPD4849sIbofZcRxLC2pnYulbihsEMVE=s2560", width = 150)
-      #  st.image("https://media.tenor.com/s1Y9XfdN08EAAAAi/bot.gif", width=200)
+        # st.success("Hi, Pranav Baviskar here! Type your questions and hit Enter to learn more about me from my AI Buddy!")
+        # # st.write("")
+      #   st.image("https://lh3.googleusercontent.com/drive-viewer/AKGpihYw04487Gzed5UbL_d4ZZP1oZ0xFdQkvvuKOTvE4p5NSMcYGWObJ_dYWchvk5ETIJ2SPD4849sIbofZcRxLC2pnYulbihsEMVE=s2560", width = 150)
+      # #  st.image("https://media.tenor.com/s1Y9XfdN08EAAAAi/bot.gif", width=200)
 
 
 if __name__ == "__main__":
