@@ -16,11 +16,6 @@ import time
 from streamlit_lottie import st_lottie
 import requests
 st.set_page_config(page_title="Pranav Baviskar ", layout="wide",page_icon='🧑🏻‍💼')
-st.markdown("""
-<style>
-    header {visibility: hidden;}
-</style>
-""",unsafe_allow_html=True)
 
 
 video_html = """
