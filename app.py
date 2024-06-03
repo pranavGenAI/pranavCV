@@ -586,37 +586,37 @@ def main():
         st.markdown(contact_form, unsafe_allow_html=True)
     
             
-    with st.sidebar:   
-        st.markdown("""
-            <style>
-                @keyframes animate {
-                    0%, 18%, 20%, 50.1%,60%, 65.1%, 80%,90.1%,92% {
-                        color: #0e3742;
-                        text-shadow: none;
-                    }
-                    18.1%, 20.1%, 30%,50%,60.1%,65%,80.1%,90%, 92.1%,100% {
-                        color: #fff;
-                        text-shadow: 0 0 10px #03bcf4,
-                                    0 0 20px #03bcf4,
-                                    0 0 40px #03bcf4,
-                                    0 0 80px #03bcf4,
-                                    0 0 160px #03bcf4;
-                    }
-                }
+    # with st.sidebar:   
+    #     st.markdown("""
+    #         <style>
+    #             @keyframes animate {
+    #                 0%, 18%, 20%, 50.1%,60%, 65.1%, 80%,90.1%,92% {
+    #                     color: #0e3742;
+    #                     text-shadow: none;
+    #                 }
+    #                 18.1%, 20.1%, 30%,50%,60.1%,65%,80.1%,90%, 92.1%,100% {
+    #                     color: #fff;
+    #                     text-shadow: 0 0 10px #03bcf4,
+    #                                 0 0 20px #03bcf4,
+    #                                 0 0 40px #03bcf4,
+    #                                 0 0 80px #03bcf4,
+    #                                 0 0 160px #03bcf4;
+    #                 }
+    #             }
 
-                .animated-gradient-text {
-                    font-family: "Graphik Semibold";
-                    font-size: 26px;
-                    color: #FFF;
-                    transition: color 0.5s, text-shadow 0.5s;
-                }
+    #             .animated-gradient-text {
+    #                 font-family: "Graphik Semibold";
+    #                 font-size: 26px;
+    #                 color: #FFF;
+    #                 transition: color 0.5s, text-shadow 0.5s;
+    #             }
 
          
 
-            </style>
-            <p class = animated-gradient-text> Pranav Baviskar CV! </p>    
+    #         </style>
+    #         <p class = animated-gradient-text> Pranav Baviskar CV! </p>    
 
-        """, unsafe_allow_html=True)
+    #     """, unsafe_allow_html=True)
         pdf_docs = ["pranav_baviskar_cv.pdf"]
         raw_text = get_pdf_text(pdf_docs)
         text_chunks = get_text_chunks(raw_text)
