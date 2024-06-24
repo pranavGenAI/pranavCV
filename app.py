@@ -507,15 +507,15 @@ def main():
             <!-- Slideshow container -->
             <div class="slideshow-container">
                 <div class="mySlides fade">
-                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYvnhZUcFmAqTBznySpPKbIunbjwGnhajUw_AbVddke4IVuq06iRtk0xqCkBlHZSIBDdqm48z_PLLm_5OcB6BO4PE8qgt-ug4g=s1600-rw-v1" style="width:90%">
+                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaRLWxQmFQY-9eamo2JVWlsT72JXOrrRlx59R9MzbaBFXRWq53xGmgUiDzJ6PxpXF3q4WXfsKANtkxAHSkIlKe0pUL0gMw1Skk=s1600-rw-v1" style="width:90%">
                 </div>
 
                 <div class="mySlides fade">
-                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbu9WR32WD6UH0abdND_jUOgMo5RtHloX4stGk23ey_-5gSmadVAJ7tppcyC0WXRZf-GAd1ZdJBsNDs3SLTFwgO2_gCo6yXjg=s1600-rw-v1" style="width:90%">
+                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbbePUieuyRdfw8FDYvOKBcwwlxCETEXtJeWMdkgpBZRc4YnfoL2NKC-Y-ZkDEh3zFPIVz48cZ6PXGZ7vcMgh2xmZOQFGXACA=s1600-rw-v1" style="width:90%">
                 </div>
 
                 <div class="mySlides fade">
-                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZqSCizZomUX0pxMiyYhMsu2943IZB0CHhuxhKYoKw1uemeIkSDsRVZ3nVa1AVjWgwNQ_yV9cHWGq3dBPXA-KFLxKgfkVOmQFU=s1600-rw-v1" style="width:90%">
+                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYARaYwZVR5JoI3el8WVjpibLWKjJpScmgTdXLjVFq2SjHCuuso9MaROuKSlnvgl36i8oZ6CtWVrKm95by1LRkQ7elWQ4Oto_k=s1600-rw-v1" style="width:90%">
                 </div>
 
             </div>
@@ -585,52 +585,13 @@ def main():
         </form>
         """
         st.markdown(contact_form, unsafe_allow_html=True)
-    
-            
-    # with st.sidebar:   
-    #     st.markdown("""
-    #         <style>
-    #             @keyframes animate {
-    #                 0%, 18%, 20%, 50.1%,60%, 65.1%, 80%,90.1%,92% {
-    #                     color: #0e3742;
-    #                     text-shadow: none;
-    #                 }
-    #                 18.1%, 20.1%, 30%,50%,60.1%,65%,80.1%,90%, 92.1%,100% {
-    #                     color: #fff;
-    #                     text-shadow: 0 0 10px #03bcf4,
-    #                                 0 0 20px #03bcf4,
-    #                                 0 0 40px #03bcf4,
-    #                                 0 0 80px #03bcf4,
-    #                                 0 0 160px #03bcf4;
-    #                 }
-    #             }
-
-    #             .animated-gradient-text {
-    #                 font-family: "Graphik Semibold";
-    #                 font-size: 26px;
-    #                 color: #FFF;
-    #                 transition: color 0.5s, text-shadow 0.5s;
-    #             }
-
-         
-
-    #         </style>
-    #         <p class = animated-gradient-text> Pranav Baviskar CV! </p>    
-
-    #     """, unsafe_allow_html=True)
         pdf_docs = ["pranav_baviskar_cv.pdf"]
         raw_text = get_pdf_text(pdf_docs)
         text_chunks = get_text_chunks(raw_text)
         get_vector_store(text_chunks, api_key)
-        # st.success("Hi, Pranav Baviskar here! Type your questions and hit Enter to learn more about me from my AI Buddy!")
-        # # st.write("")
-      #   st.image("https://lh3.googleusercontent.com/drive-viewer/AKGpihYw04487Gzed5UbL_d4ZZP1oZ0xFdQkvvuKOTvE4p5NSMcYGWObJ_dYWchvk5ETIJ2SPD4849sIbofZcRxLC2pnYulbihsEMVE=s2560", width = 150)
-      # #  st.image("https://media.tenor.com/s1Y9XfdN08EAAAAi/bot.gif", width=200)
 
 
 if __name__ == "__main__":
-    # with open('https://github.com/pranavGenAI/bidbooster/blob/475ae18b3c1f5a05a45ff983e06b025943137576/wave.css') as f:
-        # css = f.read()
 
     st.markdown('''<style>
         .stApp > header {
