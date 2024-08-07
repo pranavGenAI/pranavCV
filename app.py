@@ -185,7 +185,7 @@ def load_lottieurl(url: str):
     return r.json()
     
 def main():
-    st.header("Pranav's AI Agent")
+    st.header("AI Buddy")
     st.markdown("""
     <style>
     input {
