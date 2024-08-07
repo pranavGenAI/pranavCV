@@ -204,7 +204,7 @@ def main():
     st.markdown("""
         <div style="text-align: center;">
             <a href="https://interactive.convai.com/character-id=e4c3a900-2092-11ef-9459-42010a7be00e">
-                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbwcj2Nr4pEfKb1XRitChjU-H-jKr-HRtT_7FscpGpQGR6QIhgwbMf2Z6R06akf25HTwO8s_VM0viz1ST1pT-HV0Of7coIo6lg=s1600-rw-v1" class="glow-on-hover" height=250 width=1000>
+                <img src="https://ibb.co/0Z9Q8J1" class="glow-on-hover" height=250 width=1000>
             </a>
         </div>
     """, unsafe_allow_html=True)    
