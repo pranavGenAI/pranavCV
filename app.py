@@ -223,6 +223,9 @@ def main():
             if st.button("Ask Question"):
                 user_input(user_question, api_key)
 
+    st.markdown("""""", unsafe_allow_html=True)    
+    st.markdown("""""", unsafe_allow_html=True)    
+    st.markdown("""""", unsafe_allow_html=True)    
     st.markdown("""
         <div style="text-align: center;">
             <a href="https://interactive.convai.com/character-id=e4c3a900-2092-11ef-9459-42010a7be00e">
