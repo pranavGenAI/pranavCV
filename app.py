@@ -315,7 +315,7 @@ def main():
                     border-top: 15px solid transparent;
                     border-bottom: 15px solid transparent;
                     border-left: 15px solid rgba(255, 255, 255, 0.4); ;
-                    right: -15px;
+                    right: -14.5px;
                 }}
                 
                 .right-container-arrow{{
