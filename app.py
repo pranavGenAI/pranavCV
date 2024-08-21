@@ -327,7 +327,7 @@ def main():
                     border-top: 15px solid transparent;
                     border-bottom: 15px solid transparent;
                     border-right: 15px solid rgba(255, 255, 255, 0.4); ;
-                    left: -14px;
+                    left: -10px;
                 }}
                 .container:nth-child(1){{
                     animation-delay: 0s;  
