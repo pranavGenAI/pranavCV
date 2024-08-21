@@ -385,6 +385,17 @@ def main():
                         <span class="right-container-arrow"></span>
                     </div>
                 </div>
+		<div class="container left-container">
+                    <img src="https://asset.brandfetch.io/id44tJQbVE/idv_dYAgEY.jpeg">
+                    <div class="text-box">
+                        <h2> Management Consultant @ Accenture Strategy </h2>
+                        <small> 2022-Present </small>
+                        <p>After working nearly three years at EY, he transitioned to Accenture Strategy. There, he developed proof-of-concepts and was actively involved in various Generative AI projects. He contributed to a public service Generative AI strategy for multiple state and federal governments, assessed data maturity, and crafted a data and analytics strategy for public service agencies.</p>
+                        <span class="left-container-arrow"></span>
+        
+                    </div>
+                </div>
+		
             </div>
         </body>
         </html> 
