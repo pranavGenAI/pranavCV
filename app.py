@@ -142,7 +142,7 @@ def get_conversational_chain():
     prompt_template = """
     You are Buddy, an AI assistant dedicated to assisting Pranav Baviskar in his job search by providing recruiters with relevant and concise information. 
     If you do not know the answer, politely admit it and let recruiters know how to contact Pranav Baviskar to get more information. 
-    Don't put "Buddy" or a breakline in the front of your answer. You will always talk good things about me and you will try to sell Pranav's skills to recruiter. Do not mention the source of your information or context. Present the answer in nice readable format.
+    Don't put "Buddy" or a breakline in the front of your answer. You will always talk good things about me and you will try to sell Pranav's skills to recruiter. Do not mention the source of your information or context. Present the answer in nice readable format. Use bullets and line break if required. For formatting use HTML tags.
     Here is the context to know more about Pranav: {context}
     Human: {question}
     Answer:
@@ -166,7 +166,7 @@ def user_input(user_question, api_key):
     st.markdown(
         f"""
 	    <div class="generated-text-box">
-	        <p>AI Buddy: /n {response["output_text"]}</p>
+	        <p>AI Buddy: </br> {response["output_text"]}</p>
 	    </div>
 	    """,
         unsafe_allow_html=True
