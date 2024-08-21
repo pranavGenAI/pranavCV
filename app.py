@@ -184,11 +184,11 @@ st.markdown(
     """
     <style>
     .generated-text-box {
-        border: 3px solid #A020F0; /* Thick border */
-        padding: 20px;  
+        border: 3px solid grey; /* Grey border */
+        padding: 10px;  
         border-radius: 10px; /* Rounded corners */
         color: black; /* Text color */
-        background-color: #FFFFFF; /* Background color matching theme */
+        background-color: rgba(255, 255, 255, 0); /* Transparent background */
     }
     </style>
     """,
