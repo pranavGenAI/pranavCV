@@ -49,7 +49,7 @@ st.markdown(video_html, unsafe_allow_html=True)
 
 
 # HTML for particles animation
-st.header(':blue[Pranav Kishor Baviskar CV | Management Consultant | AI Enthusiast]')
+st.header(':blue[Pranav Kishor Baviskar | Management Consultant | AI Enthusiast]')
 
 st.write("Hey there, I'm Pranav! I'm passionate about leveraging data and technology to drive meaningful insights and solutions in business. Check out my LinkedIn profile on https://www.linkedin.com/in/pranav-baviskar/")
 
