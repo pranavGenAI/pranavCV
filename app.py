@@ -467,15 +467,15 @@ def main():
             <!-- Slideshow container -->
             <div class="slideshow-container">
                 <div class="mySlides fade">
-                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaRLWxQmFQY-9eamo2JVWlsT72JXOrrRlx59R9MzbaBFXRWq53xGmgUiDzJ6PxpXF3q4WXfsKANtkxAHSkIlKe0pUL0gMw1Skk=s1600-rw-v1" style="width:90%">
+                <img src="https://i.ibb.co/Jmx4H6g/testimony-3.png" style="width:90%">
                 </div>
 
                 <div class="mySlides fade">
-                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbbePUieuyRdfw8FDYvOKBcwwlxCETEXtJeWMdkgpBZRc4YnfoL2NKC-Y-ZkDEh3zFPIVz48cZ6PXGZ7vcMgh2xmZOQFGXACA=s1600-rw-v1" style="width:90%">
+                <img src="https://i.ibb.co/hDYTd5n/testimony-1.png" style="width:90%">
                 </div>
 
                 <div class="mySlides fade">
-                <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYARaYwZVR5JoI3el8WVjpibLWKjJpScmgTdXLjVFq2SjHCuuso9MaROuKSlnvgl36i8oZ6CtWVrKm95by1LRkQ7elWQ4Oto_k=s1600-rw-v1" style="width:90%">
+                <img src="https://i.ibb.co/8mctPzk/testimony-2.png" style="width:90%">
                 </div>
 
             </div>
