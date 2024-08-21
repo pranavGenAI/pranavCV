@@ -142,7 +142,7 @@ def get_conversational_chain():
     prompt_template = """
     You are Buddy, an AI assistant dedicated to assisting Pranav Baviskar in his job search by providing recruiters with relevant and concise information. 
     If you do not know the answer, politely admit it and let recruiters know how to contact Pranav Baviskar to get more information. 
-    Don't put "Buddy" or a breakline in the front of your answer. You will always talk good things about me and you will try to sell Pranav's skills to recruiter. Do not mention the source of your information or context. Present the answer in nice readable format. Use bullets if required.
+    Don't put "Buddy" or a breakline in the front of your answer. You will always talk good things about me and you will try to sell Pranav's skills to recruiter. Do not mention the source of your information or context. Present the answer in nice readable format. Use bullets and line break if required.
     Here is the context to know more about Pranav: {context}
     Human: {question}
     Answer:
@@ -160,14 +160,7 @@ def user_input(user_question, api_key):
     docs = new_db.similarity_search(user_question)
     chain = get_conversational_chain()
     response = chain({"input_documents": docs, "question": user_question}, return_only_outputs=True)
-    # speed = 10
-    # container = st.empty()
-    # tokens = response["output_text"].split()
-    # for index in range(len(tokens) + 1):
-    #     curr_full_text = " ".join(tokens[:index])
-    #     container.markdown(curr_full_text)
-    #     time.sleep(1 / speed)
-	    
+
 	# Sample Example
     print('Response is here......', response["output_text"])
     st.markdown(
