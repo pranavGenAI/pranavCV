@@ -399,7 +399,7 @@ def main():
             </div>
         </body>
         </html> 
-        """, height=1300)
+        """, height=2000)
 
 
 
