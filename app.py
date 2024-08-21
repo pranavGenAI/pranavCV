@@ -167,10 +167,33 @@ def user_input(user_question, api_key):
     #     curr_full_text = " ".join(tokens[:index])
     #     container.markdown(curr_full_text)
     #     time.sleep(1 / speed)
-    
-    #Sample Example
-    print('response is here......',response["output_text"])
-    st.write(response["output_text"])
+	    
+	# Sample Example
+    print('Response is here......', response["output_text"])
+    st.markdown(
+        f"""
+	    <div class="generated-text-box">
+	        <h3>Classification Result:</h3>
+	        <p>AI Buddy: {response["output_text"]}</p>
+	    </div>
+	    """,
+        unsafe_allow_html=True
+    )
+
+st.markdown(
+    """
+    <style>
+    .generated-text-box {
+        border: 3px solid #A020F0; /* Thick border */
+        padding: 20px;  
+        border-radius: 10px; /* Rounded corners */
+        color: black; /* Text color */
+        background-color: #FFFFFF; /* Background color matching theme */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 def gradient(color1, color2, color3, content1, content2):
     st.markdown(f'<h1 style="text-align:center;background-image: linear-gradient(to right,{color1}, {color2});font-size:60px;border-radius:2%;">'
