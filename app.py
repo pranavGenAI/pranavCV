@@ -173,7 +173,6 @@ def user_input(user_question, api_key):
     st.markdown(
         f"""
 	    <div class="generated-text-box">
-	        <h3>Classification Result:</h3>
 	        <p>AI Buddy: {response["output_text"]}</p>
 	    </div>
 	    """,
@@ -184,10 +183,10 @@ st.markdown(
     """
     <style>
     .generated-text-box {
-        border: 3px solid grey; /* Grey border */
+        border: 1px solid grey; /* Grey border */
         padding: 10px;  
         border-radius: 10px; /* Rounded corners */
-        color: black; /* Text color */
+        color: white; /* Text color */
         background-color: rgba(255, 255, 255, 0); /* Transparent background */
     }
     </style>
