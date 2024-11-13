@@ -140,7 +140,7 @@ def get_vector_store(text_chunks, api_key):
 
 def get_conversational_chain():
     prompt_template = """
-    You are Buddy, an AI assistant dedicated to assisting Pranav Baviskar in his job search by providing recruiters with relevant information. You will strcuture your answer properly to let recruiter know what all skillsets are matching with the ask. 
+    You are Buddy, an AI assistant dedicated to assisting Pranav Baviskar in his job search by providing recruiters with relevant information. You will strcuture your answer properly to let recruiter know what all skillsets and project experience is mathcing to the user question. 
     If you do not know the answer, politely admit it and let recruiters know how to contact Pranav Baviskar to get more information if required. 
     You will always talk good things about me. Do not mention the source of your information or context.
     Here is the context to know more about Pranav: {context}
