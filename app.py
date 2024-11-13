@@ -221,7 +221,7 @@ def main():
     st.markdown("""""", unsafe_allow_html=True)    
     st.markdown("""
         <div style="text-align: center;">
-            <a href="https://interactive.convai.com/character-id=e4c3a900-2092-11ef-9459-42010a7be00e">
+            <a href="https://pranavbaviskarcv.streamlit.app/">
                 <img src="https://i.ibb.co/rMpvTyq/Galactice.png" class="glow-on-hover" height=250 width=1000>
             </a>
         </div>
