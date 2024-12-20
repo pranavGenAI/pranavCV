@@ -81,11 +81,17 @@ with st.form(key='uid_form'):
     uid = st.text_input("", label_visibility="hidden", placeholder="Enter your UID here", help="Enter your unique identifier", max_chars=50)
     submit_button = st.form_submit_button(label="Submit", use_container_width=True)
     
-# Handle form submission and redirection
+# Handle form submission and automatic redirection
 if submit_button:
     if uid:
         st.success(f"UID {uid} captured successfully!")
-        # Provide a clickable link to Google for redirection
-        st.markdown("[Click here to go to Google](https://www.google.com)", unsafe_allow_html=True)
+        # Use JavaScript for automatic redirection
+        st.markdown(
+            """
+            <script type="text/javascript">
+            window.location.href = "https://www.google.com";
+            </script>
+            """, unsafe_allow_html=True
+        )
     else:
         st.error("Please enter a valid UID.")
