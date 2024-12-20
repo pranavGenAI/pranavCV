@@ -73,7 +73,7 @@ st.markdown(
 
 # Display the NHS logo at the top with a reduced size and subtle hover effect
 st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/National_Health_Service_%28England%29_logo.svg/2560px-National_Health_Service_%28England%29_logo.svg.png", 
-         width=150, use_column_width=False, caption="NHS Logo", class_="logo")
+         width=150, use_column_width=False, caption="NHS Logo")
 
 # Title for the app with modern font and color
 st.markdown('<h1 class="title">UID Capture and Redirect</h1>', unsafe_allow_html=True)
