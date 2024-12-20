@@ -6,46 +6,61 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #f0f4f8;
-        font-family: 'Helvetica Neue', sans-serif;
+        background: linear-gradient(135deg, #6c83e1, #4bc4d4);
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
     }
     .title {
-        color: #1e3a8a;
+        color: #ffffff;
         font-size: 36px;
         text-align: center;
+        font-weight: bold;
+        margin-top: 30px;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     }
     .button {
         background-color: #4CAF50;
         color: white;
-        padding: 10px 20px;
-        font-size: 18px;
-        border-radius: 5px;
+        padding: 12px 28px;
+        font-size: 20px;
+        border-radius: 10px;
         border: none;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
     }
     .button:hover {
         background-color: #45a049;
+        box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+        transform: translateY(-4px);
     }
     .logo {
         display: block;
-        margin: 0 auto;
-        max-width: 200px;
+        margin: 20px auto;
+        max-width: 150px;
+        transition: all 0.3s ease;
+    }
+    .logo:hover {
+        transform: rotate(10deg);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
     .input-container {
         text-align: center;
+        margin-top: 20px;
     }
     .input-label {
         font-size: 18px;
-        color: #333;
+        color: #ffffff;
         margin-bottom: 10px;
     }
     .input-field {
         font-size: 18px;
-        padding: 10px;
-        width: 70%;
-        border-radius: 5px;
+        padding: 12px;
+        width: 80%;
+        border-radius: 10px;
         border: 1px solid #ddd;
+        margin-bottom: 20px;
     }
     .message {
         font-size: 16px;
@@ -56,8 +71,9 @@ st.markdown(
     """, unsafe_allow_html=True
 )
 
-# Display the NHS logo at the top
-st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/National_Health_Service_%28England%29_logo.svg/2560px-National_Health_Service_%28England%29_logo.svg.png", width=200, use_column_width=True)
+# Display the NHS logo at the top with a reduced size and subtle hover effect
+st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/National_Health_Service_%28England%29_logo.svg/2560px-National_Health_Service_%28England%29_logo.svg.png", 
+         width=150, use_column_width=False, caption="NHS Logo", class_="logo")
 
 # Title for the app with modern font and color
 st.markdown('<h1 class="title">UID Capture and Redirect</h1>', unsafe_allow_html=True)
@@ -65,8 +81,8 @@ st.markdown('<h1 class="title">UID Capture and Redirect</h1>', unsafe_allow_html
 # Capture UID input from the user in a beautiful input box
 with st.form(key='uid_form'):
     st.markdown('<div class="input-container"><label class="input-label">Please enter your UID:</label></div>', unsafe_allow_html=True)
-    uid = st.text_input("", label_visibility="hidden", placeholder="Enter UID here", help="Enter your unique identifier", max_chars=50)
-    submit_button = st.form_submit_button(label="Submit", use_container_width=True, disabled=False)
+    uid = st.text_input("", label_visibility="hidden", placeholder="Enter your UID here", help="Enter your unique identifier", max_chars=50)
+    submit_button = st.form_submit_button(label="Submit", use_container_width=True)
     
 # Handle form submission and redirection
 if submit_button:
