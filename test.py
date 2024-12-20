@@ -1,19 +1,18 @@
 import streamlit as st
 import webbrowser
 
-# Add custom CSS for styling the app
+# Add custom CSS for styling the app with wave background
 st.markdown(
     """
     <style>
     body {
-        background: repeating-linear-gradient(
-            45deg,
-            #1e3a8a, #1e3a8a 10px, 
-            #3b82f6 10px, #3b82f6 20px
-        );
+        background: linear-gradient(to bottom, #1e3a8a, #1e3a8a);
+        background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%233b82f6" d="M0,256L1440,96L1440,0L0,0Z" %2F%3E%3C%2Fsvg%3E');
+        background-size: cover;
         font-family: 'Arial', sans-serif;
         margin: 0;
         padding: 0;
+        position: relative;
     }
     .title {
         color: #ffffff;
