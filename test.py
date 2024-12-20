@@ -1,5 +1,4 @@
 import streamlit as st
-import time
 
 # Add custom CSS for styling the app
 st.markdown(
@@ -82,15 +81,11 @@ with st.form(key='uid_form'):
     uid = st.text_input("", label_visibility="hidden", placeholder="Enter your UID here", help="Enter your unique identifier", max_chars=50)
     submit_button = st.form_submit_button(label="Submit", use_container_width=True)
     
-# Handle form submission and automatic redirection
+# Handle form submission and redirection
 if submit_button:
     if uid:
         st.success(f"UID {uid} captured successfully!")
-        # Simulate redirection by displaying a message after a delay
-        time.sleep(2)  # Simulate delay
-        st.experimental_rerun()  # This will reload the page
-
-        # After the page reloads, show the redirection link
+        # Provide a clickable link to Google for redirection
         st.markdown("[Click here to go to Google](https://www.google.com)", unsafe_allow_html=True)
     else:
         st.error("Please enter a valid UID.")
