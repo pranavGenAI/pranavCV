@@ -1,5 +1,4 @@
 import streamlit as st
-import webbrowser
 
 # Add custom CSS for styling the app
 st.markdown(
@@ -86,7 +85,13 @@ with st.form(key='uid_form'):
 if submit_button:
     if uid:
         st.success(f"UID {uid} captured successfully!")
-        # Redirect user to Google after a short delay
-        webbrowser.open("https://www.google.com")
+        # JavaScript for redirection
+        st.markdown(
+            """
+            <script type="text/javascript">
+            window.location.href = "https://www.google.com";
+            </script>
+            """, unsafe_allow_html=True
+        )
     else:
         st.error("Please enter a valid UID.")
