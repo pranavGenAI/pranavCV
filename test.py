@@ -1,25 +1,34 @@
 import streamlit as st
 import webbrowser
 
-# Add custom CSS for styling the app with wave background
+# Add custom CSS for styling the app with a new background and logo in the corner
 st.markdown(
     """
     <style>
     body {
-        background: linear-gradient(to bottom, #1e3a8a, #1e3a8a);
-        background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%233b82f6" d="M0,256L1440,96L1440,0L0,0Z" %2F%3E%3C%2Fsvg%3E');
-        background-size: cover;
+        background: linear-gradient(135deg, #1e3a8a, #3b82f6); /* Blue gradient background */
         font-family: 'Arial', sans-serif;
         margin: 0;
         padding: 0;
         position: relative;
+    }
+    .logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 100px;
+        transition: all 0.3s ease;
+    }
+    .logo:hover {
+        transform: rotate(10deg);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
     .title {
         color: #ffffff;
         font-size: 36px;
         text-align: center;
         font-weight: bold;
-        margin-top: 30px;
+        margin-top: 100px;
         text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     }
     .button {
@@ -37,16 +46,6 @@ st.markdown(
         background-color: #45a049;
         box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
         transform: translateY(-4px);
-    }
-    .logo {
-        display: block;
-        margin: 20px auto;
-        max-width: 150px;
-        transition: all 0.3s ease;
-    }
-    .logo:hover {
-        transform: rotate(10deg);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
     .input-container {
         text-align: center;
@@ -74,9 +73,9 @@ st.markdown(
     """, unsafe_allow_html=True
 )
 
-# Display the NHS logo at the top with a reduced size and subtle hover effect, without caption
+# Display the NHS logo at the top left corner, smaller size
 st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/National_Health_Service_%28England%29_logo.svg/2560px-National_Health_Service_%28England%29_logo.svg.png", 
-         width=150, use_column_width=False)
+         width=100, use_column_width=False)
 
 # Title for the app with modern font and color
 st.markdown('<h1 class="title">UID Capture and Redirect</h1>', unsafe_allow_html=True)
