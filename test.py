@@ -65,7 +65,7 @@ st.markdown('<h1 class="title">UID Capture and Redirect</h1>', unsafe_allow_html
 # Capture UID input from the user in a beautiful input box
 with st.form(key='uid_form'):
     st.markdown('<div class="input-container"><label class="input-label">Please enter your UID:</label></div>', unsafe_allow_html=True)
-    uid = st.text_input("", key="uid_input", label_visibility="hidden", placeholder="Enter UID here", help="Enter your unique identifier", max_chars=50, key="uid_input")
+    uid = st.text_input("", label_visibility="hidden", placeholder="Enter UID here", help="Enter your unique identifier", max_chars=50)
     submit_button = st.form_submit_button(label="Submit", use_container_width=True, disabled=False)
     
 # Handle form submission and redirection
@@ -76,4 +76,3 @@ if submit_button:
         webbrowser.open("https://www.google.com")
     else:
         st.error("Please enter a valid UID.")
-
