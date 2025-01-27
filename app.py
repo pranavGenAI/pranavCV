@@ -216,7 +216,7 @@ def main():
             if st.button("Ask Question"):
                 user_input(user_question, api_key)
 
-    st.markdown(""My Projects"""", unsafe_allow_html=True)    
+    st.markdown("My Projects", unsafe_allow_html=True)    
     st.markdown("""""", unsafe_allow_html=True)    
     st.markdown("""""", unsafe_allow_html=True)    
     st.markdown("""
