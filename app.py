@@ -161,24 +161,15 @@ def user_input(user_question, api_key):
 
 	# Sample Example
     print('Response is here......', response["output_text"])
-    col1,col2 = st.columns([0.3, 0.7])
-    with col1:
-        st.markdown(
-            f"""
-            <div class="generated-text-box">
-                <p>AI Buddy: </br> {response["output_text"]}</p>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
-    with col2:   
-        st.download_button(
-            label="Download CV",
-            data=open("pranav_baviskar_cv.pdf", "rb").read(),
-            file_name="Pranav_Baviskar_Data_AI_CV.pdf",
-            mime="application/pdf"
-        )
-
+    st.markdown(
+        f"""
+	    <div class="generated-text-box">
+	        <p>AI Buddy: </br> {response["output_text"]}</p>
+	    </div>
+	    """,
+        unsafe_allow_html=True
+    )
+    
 st.markdown(
     """
     <style>
@@ -207,7 +198,16 @@ def load_lottieurl(url: str):
     return r.json()
     
 def main():
-    st.header("AI Buddy")
+    col4,col5 = st.columns([0.3, 0.7])
+    with col5:
+        st.download_button(
+            label="Download CV",
+            data=open("pranav_baviskar_cv.pdf", "rb").read(),
+            file_name="Pranav_Baviskar_Data_AI_CV.pdf",
+            mime="application/pdf"
+        )
+    with col4:
+        st.header("AI Buddy")
     st.markdown("""
     <style>
     input {
