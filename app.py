@@ -232,7 +232,7 @@ def main():
     st.markdown("""
         <div style="text-align: center;">
             <a href="https://pranavbaviskarcv.streamlit.app/">
-                <img src="https://i.ibb.co/rMpvTyq/Galactice.png" class="glow-on-hover" height=250 width=1000>
+                <img src="https://i.ibb.co/mRJJ33f/virtual-campus.png" class="glow-on-hover" height=250 width=1000>
             </a>
         </div>
     """, unsafe_allow_html=True)    
