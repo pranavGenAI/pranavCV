@@ -136,8 +136,6 @@ def get_vector_store(text_chunks, api_key):
     vector_store = FAISS.from_texts(text_chunks, embedding=embeddings)
     vector_store.save_local("faiss_index")
 
-
-
 def get_conversational_chain():
     prompt_template = """
     You are Buddy, an AI assistant dedicated to assisting Pranav Baviskar in his job search by providing recruiters with relevant information. You will strcuture your answer properly to let recruiter know of the only skillsets and project experience which is matching to the user question. Limit your answer to 800 characters.
@@ -163,14 +161,23 @@ def user_input(user_question, api_key):
 
 	# Sample Example
     print('Response is here......', response["output_text"])
-    st.markdown(
-        f"""
-	    <div class="generated-text-box">
-	        <p>AI Buddy: </br> {response["output_text"]}</p>
-	    </div>
-	    """,
-        unsafe_allow_html=True
-    )
+    col1,col2 = st.columns([0.3, 0.7])
+    with col1:
+        st.markdown(
+            f"""
+            <div class="generated-text-box">
+                <p>AI Buddy: </br> {response["output_text"]}</p>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+    with col2:   
+        st.download_button(
+            label="Download CV",
+            data=open("pranav_baviskar_cv.pdf", "rb").read(),
+            file_name="Pranav_Baviskar_Data_AI_CV.pdf",
+            mime="application/pdf"
+        )
 
 st.markdown(
     """
