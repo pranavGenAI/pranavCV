@@ -218,7 +218,7 @@ def main():
     st.markdown("""""", unsafe_allow_html=True)    
     st.markdown("""""", unsafe_allow_html=True)
     st.markdown("""""", unsafe_allow_html=True)    
-    with st.expander("🗂️ Explore My Personal Projects"):
+    with st.expander("👆🏻 Click here to explore my personal AI projects"):
         st.subheader('🗂️ Personal Projects')
         st.markdown("LLM-Metaverse CV (In Progress)", unsafe_allow_html=True)    
         st.markdown("""
