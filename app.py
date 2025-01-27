@@ -218,32 +218,33 @@ def main():
     st.markdown("""""", unsafe_allow_html=True)    
     st.markdown("""""", unsafe_allow_html=True)
     st.markdown("""""", unsafe_allow_html=True)    
-    st.subheader('🗂️ Personal Projects')
-    st.markdown("LLM-Metaverse CV (In Progress)", unsafe_allow_html=True)    
-    st.markdown("""
-        <div style="text-align: center;">
-            <a href="https://pranavbaviskarcv.streamlit.app/">
-                <img src="https://i.ibb.co/rMpvTyq/Galactice.png" class="glow-on-hover" height=250 width=1000>
-            </a>
-        </div>
-    """, unsafe_allow_html=True)  
+    with st.expander("🗂️ Explore My Personal Projects"):
+        st.subheader('🗂️ Personal Projects')
+        st.markdown("LLM-Metaverse CV (In Progress)", unsafe_allow_html=True)    
+        st.markdown("""
+            <div style="text-align: center;">
+                <a href="https://pranavbaviskarcv.streamlit.app/">
+                    <img src="https://i.ibb.co/rMpvTyq/Galactice.png" class="glow-on-hover" height=250 width=1000>
+                </a>
+            </div>
+        """, unsafe_allow_html=True)  
 
-    st.markdown("LLM-Metaverse Campus (Working Demo Available)", unsafe_allow_html=True)    
-    st.markdown("""
-        <div style="text-align: center;">
-            <a href="https://pranavbaviskarcv.streamlit.app/">
-                <img src="https://i.ibb.co/mRJJ33f/virtual-campus.png" class="glow-on-hover" height=250 width=1000>
-            </a>
-        </div>
-    """, unsafe_allow_html=True)    
-    st.markdown("GenAI Powered Solutions (Working Demo Available)", unsafe_allow_html=True)    	
-    st.markdown("""
-        <div style="text-align: center;">
-            <a href="https://pranavbaviskarcv.streamlit.app/">
-                <img src="https://i.ibb.co/z69Gh7S/genaipoc.png" class="glow-on-hover" height=250 width=600>
-            </a>
-        </div>
-    """, unsafe_allow_html=True)    
+        st.markdown("LLM-Metaverse Campus (Working Demo Available)", unsafe_allow_html=True)    
+        st.markdown("""
+            <div style="text-align: center;">
+                <a href="https://pranavbaviskarcv.streamlit.app/">
+                    <img src="https://i.ibb.co/mRJJ33f/virtual-campus.png" class="glow-on-hover" height=250 width=1000>
+                </a>
+            </div>
+        """, unsafe_allow_html=True)    
+        st.markdown("GenAI Powered Solutions (Working Demo Available)", unsafe_allow_html=True)    	
+        st.markdown("""
+            <div style="text-align: center;">
+                <a href="https://pranavbaviskarcv.streamlit.app/">
+                    <img src="https://i.ibb.co/z69Gh7S/genaipoc.png" class="glow-on-hover" height=250 width=600>
+                </a>
+            </div>
+        """, unsafe_allow_html=True)    
 	
 
     ########### Career Snapshot ##############
