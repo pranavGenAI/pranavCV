@@ -199,13 +199,7 @@ def load_lottieurl(url: str):
     
 def main():
     col4,col5 = st.columns([0.3, 0.7])
-    with col5:
-        st.download_button(
-            label="Download CV",
-            data=open("pranav_baviskar_cv.pdf", "rb").read(),
-            file_name="Pranav_Baviskar_Data_AI_CV.pdf",
-            mime="application/pdf"
-        )
+
     with col4:
         st.header("AI Buddy")
     st.markdown("""
