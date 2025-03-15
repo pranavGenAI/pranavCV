@@ -111,7 +111,7 @@ st.markdown("""
 
 
 # This is the first API key input; no need to repeat it in the main function.
-api_key = "AIzaSyB6RllUpR7hX7XsyCN_yU-D5V9-dMTYIo4"
+api_key = "AIzaSyBr83H2x6poOmG6GkeyaaTwX1E2wX0sfC4"
 groq_api_key = "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"
 
 if 'responses' not in st.session_state:
