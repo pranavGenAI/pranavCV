@@ -103,15 +103,8 @@ st.markdown("""
 
 """, unsafe_allow_html=True)
 
-
-
-
-#st.image("https://media1.tenor.com/m/6o864GYN6wUAAAAC/interruption-sorry.gif", width=1000)
-# st.image("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjl2dGNiYThobHplMG81aGNqMjdsbWwwYWJmbTBncGp6dHFtZTFzMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/CGP9713UVzQ0BQPhSf/giphy.gif", width=50)
-
-
 # This is the first API key input; no need to repeat it in the main function.
-api_key = "AIzaSyAmdk81BkpuS7WiLXJOWiOa7S5wlO4i0sc"
+api_key = "AIzaSyAAuinhF4VsJ8jwwQrntVQAsqxVhkUgfhQ"
 groq_api_key = "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"
 
 if 'responses' not in st.session_state:
@@ -148,7 +141,7 @@ def get_conversational_chain():
     Human: {question}
     Answer:
     """
-    model = ChatGoogleGenerativeAI(model="gemini-002", temperature=0.3, google_api_key=api_key)
+    model = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.3, google_api_key=api_key)
     prompt = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
     print("Prompt ***** --->", prompt)
 	
