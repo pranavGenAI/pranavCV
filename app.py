@@ -134,14 +134,13 @@ def get_vector_store(text_chunks, api_key):
 
 def get_conversational_chain():
     prompt_template = """
-    You are Buddy, an AI assistant dedicated to assisting Pranav Baviskar in his job search by providing recruiters with relevant information. You will strcuture your answer properly to let recruiter know of the only skillsets and project experience which is matching to the user question. Limit your answer to 800 characters.
-    If you do not know the answer, politely admit it and let recruiters know how to contact Pranav Baviskar to get more information if required. 
-    You will always talk good things about me. Do not mention the source of your information or context.
+    You are Buddy, an AI assistant dedicated to assisting Pranav Baviskar in his job search by providing recruiters with relevant information. You will structured your answer properly to let recruiter know of the skillsets and project experience which is matching to the user question.
+    If you do not know the answer, politely admit it and let recruiters know how to contact Pranav Baviskar to get more information if required. Do not mention the source of your information or context.
     Here is the context to know more about Pranav: {context}
     Human: {question}
     Answer:
     """
-    model = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperature=0.3, google_api_key=api_key)
+    model = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperature=0.7, google_api_key=api_key)
     prompt = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
     print("Prompt ***** --->", prompt)
 	
