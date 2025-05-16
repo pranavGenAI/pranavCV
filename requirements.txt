@@ -9,7 +9,9 @@ google-auth==2.29.0
 google-auth-httplib2==0.2.0
 google-generativeai==0.5.2
 googleapis-common-protos==1.63.0
-langchain
+langchain>=0.1.14
+groq
+langchain_groq
 langchain-community==0.0.36
 langchain-core==0.1.50
 langchain-google-genai==1.0.3
@@ -27,6 +29,4 @@ tiktoken==0.6.0
 toml==0.10.2
 toolz==0.12.1
 tornado==6.4
-groq
 langchain-core
-langchain-groq
