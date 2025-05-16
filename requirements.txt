@@ -28,3 +28,5 @@ toml==0.10.2
 toolz==0.12.1
 tornado==6.4
 groq
+langchain-core
+langchain-groq
