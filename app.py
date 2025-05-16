@@ -248,8 +248,7 @@ Generative AI POC Development Experience
         
 
 def user_input(user_question, api_key):
-	response= generate_content(user_question, "llama-3.1-8b-instant")
-
+    response = generate_content(user_question, "llama-3.1-8b-instant")
     #embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=api_key)
     #new_db = FAISS.load_local("faiss_index", embeddings)
     #new_db = FAISS.load_local("faiss_index", embeddings,allow_dangerous_deserialization=True)
@@ -259,7 +258,6 @@ def user_input(user_question, api_key):
     #response = chain({"input_documents": docs, "question": user_question}, return_only_outputs=True)
 	
 	# Sample Example
-    print('Response is here......')
     st.markdown(
         f"""
 	    <div class="generated-text-box">
