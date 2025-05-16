@@ -147,20 +147,123 @@ def get_conversational_chain():
     chain = load_qa_chain(model, chain_type="stuff", prompt=prompt)
     return chain
 
-def user_input(user_question, api_key):
-    embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=api_key)
-    #new_db = FAISS.load_local("faiss_index", embeddings)
-    new_db = FAISS.load_local("faiss_index", embeddings,allow_dangerous_deserialization=True)
-    docs = new_db.similarity_search(user_question)
-    chain = get_conversational_chain()
-    response = chain({"input_documents": docs, "question": user_question}, return_only_outputs=True)
 
+def generate_content(user_question, model):
+    conversational_memory_length = 5
+    memory = ConversationBufferWindowMemory(
+        k=conversational_memory_length, memory_key="chat_history", return_messages=True
+    )
+
+    if "chat_history" not in st.session_state:
+        st.session_state.chat_history = []
+    else:
+        for message in st.session_state.chat_history:
+            memory.save_context({"input": message["human"]}, {"output": message["AI"]})
+
+    groq_chat = ChatGroq(groq_api_key=groq_api_key, model_name=model)
+
+    if user_question:
+        prompt = ChatPromptTemplate.from_messages(
+            [
+                SystemMessage(
+                    content=f"""You are Buddy, an AI assistant developed by Pranav Baviskar to assist him in his job search by providing recruiters with relevant information. You will structured your answer properly to let recruiter know of the skillsets and project experience which is matching to the user question.
+If you do not know the answer, politely admit it and let recruiters know how to contact Pranav Baviskar to get more information if required. Do not mention the source of your information or context.
+Here is the context to know more about Pranav:
+Name: Pranav Kishor Baviskar 
+Designation: Management Consultant
+Email: pranav.baviskar@accenture.com
+Market: UKIA, NA, ME, Japan, India
+Pranav Baviskar is a Management Consultant with 8 years of experience in digital transformation, data strategy, AI & Generative AI, and process optimization. He specializes in bridging technical and business domains, with a strong focus on Power Platform solutions.
+He holds an MBA from IIM Bodh Gaya (Gold Medalist) and a BE from the University of Pune (Merit Scholar), along with certifications in Data Visualization (Microsoft), CSPO, and INSEAD Strategy Program (Distinction). Known for implementing scalable Power Platform solutions, he excels in enabling analytics-driven decision-making and leading high-impact digital transformation programs.
+FUNCTIONAL EXPERTISE:
+• Low-Code/No-Code Application Development
+• Process Automation
+• Data Visualization
+• Advanced Data Analytics 
+• Business Process Modelling
+• Data Operating Model Design
+• Agile delivery methodologies
+• Project Management
+INDUSTRY EXPERTISE:
+• Non-Profit
+• Public Health
+• Wealth Management Fund
+• Social Service
+TOOLS:
+• Power apps
+• Power Automate
+• Power BI 
+• Power Pages
+• Copilot Studio
+• UiPath
+• Visio
+• Collibra
+• SQL
+SELECTED EXPERIENCES:
+Power Platform Experience
+Data-Driven Change Management (M365 Migration) Consultant – NHS, UK
+• Led initiatives focused on data-driven change management during the NHS-wide M365 migration.
+• Consolidated data from multiple sources, including ServiceNow and Viva Suite, to build Power Apps and Power BI solutions for reporting and visualization.
+• Conducted analytical walkthroughs with clients, presenting insights on low-engagement organizations and delivering tailored Power BI dashboards.
+• Designed and executed A/B testing to evaluate email communication effectiveness and derived insights to optimize communication strategies.
+• Designed and implemented an RPA workflow in UiPath to automate the extraction of data from the NHS portal, integrated it into Power BI dashboards
+Data Visualization Specialist - Public Investment Fund (PIF), KSA
+• Conducted requirement gathering sessions and designed mock-ups basis client inputs
+• Used SQL to analyse the data received from multiple sources for identifying the required data fields for visualization
+• Developed Several comprehensive analytical Power BI Dashboards with large amounts of quantitative and qualitative data
+Data Consultant for the leading NGO in wildlife conservation
+• Designed and implemented a VBA-based financial model and a Power App for streamlined data capture on project funding and activities.
+• Created an executive-level Power BI dashboard tracking key financial metrics to support strategic planning.
+• Conducted user interviews to ensure solutions were aligned with stakeholder needs and organizational goals.
+Power Platform Developer – Project Management Tool
+• Developed a custom Power App for tracking project milestones, statuses, and financials. 
+• Built Power BI dashboards to provide real-time insights to leadership.
+• Automated key processes using Power Automate, including:
+	o Custom emails (with/without attachments) on project updates.
+	o Teams alerts for deadlines and budget issues.
+Generative AI POC Development Experience
+• Developed three PoCs: a Bid Generation Bot, a Bid Query Bot, and a Bid Evaluation AI. Fine-tuned open-source LLM models (Llama, Mistral) & open-source libraries (Langchain), hosted on the open-source platforms Streamlit and Chainlit.      
+"""
+                ),
+                MessagesPlaceholder(variable_name="chat_history"),
+                HumanMessagePromptTemplate.from_template("{user_question}"),
+            ]
+        )
+
+        conversation = LLMChain(
+            llm=groq_chat,
+            prompt=prompt,
+            verbose=True,
+            memory=memory,
+        )
+
+        try:
+            response = conversation.predict(user_question=user_question)
+            message = {"human": user_question, "AI": response}
+            st.session_state.chat_history.append(message)
+            return response
+        except Exception as e:
+            st.error(f"Error generating response: {str(e)}")
+            return "Sorry, I couldn't generate a response right now."
+        
+
+def user_input(user_question, api_key):
+	response= generate_content(user_question, "llama-3.1-8b-instant")
+
+    #embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=api_key)
+    #new_db = FAISS.load_local("faiss_index", embeddings)
+    #new_db = FAISS.load_local("faiss_index", embeddings,allow_dangerous_deserialization=True)
+    #docs = new_db.similarity_search(user_question)
+    #chain = get_conversational_chain()
+
+    #response = chain({"input_documents": docs, "question": user_question}, return_only_outputs=True)
+	
 	# Sample Example
-    print('Response is here......', response["output_text"])
+    print('Response is here......')
     st.markdown(
         f"""
 	    <div class="generated-text-box">
-	        <p>AI Buddy: </br> {response["output_text"]}</p>
+	        <p>AI Buddy: </br> {response}</p>
 	    </div>
 	    """,
         unsafe_allow_html=True
