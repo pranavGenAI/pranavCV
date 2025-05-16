@@ -105,7 +105,7 @@ st.markdown("""
 
 # This is the first API key input; no need to repeat it in the main function.
 api_key = "AIzaSyBfpPDIDdLTNtL1WcKbgYJGDuiE-cVuvZU"
-groq_api_key = "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"
+groq_api_key = "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"
 
 if 'responses' not in st.session_state:
     st.session_state['responses'] = ["How can I assist you?"]
