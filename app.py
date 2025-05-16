@@ -18,8 +18,7 @@ import requests
 from groq import Groq
 from langchain.memory import ConversationBufferWindowMemory
 from langchain.prompts.chat import ChatPromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate, MessagesPlaceholder
-from langchain.chat_models import ChatGroq  # Required for Groq chat interface
-
+from langchain_groq import ChatGroq
 
 st.set_page_config(page_title="Pranav Baviskar ", layout="wide", page_icon="🧑🏻‍💼")
 
