@@ -109,7 +109,7 @@ st.markdown("""
 
 # This is the first API key input; no need to repeat it in the main function.
 api_key = "AIzaSyBfpPDIDdLTNtL1WcKbgYJGDuiE-cVuvZU"
-groq_api_key = "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"
+groq_api_key = "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"
 
 if 'responses' not in st.session_state:
     st.session_state['responses'] = ["How can I assist you?"]
@@ -227,6 +227,28 @@ Power Platform Developer – Project Management Tool
 	o Teams alerts for deadlines and budget issues.
 Generative AI POC Development Experience
 • Developed three PoCs: a Bid Generation Bot, a Bid Query Bot, and a Bid Evaluation AI. Fine-tuned open-source LLM models (Llama, Mistral) & open-source libraries (Langchain), hosted on the open-source platforms Streamlit and Chainlit.      
+Data-Driven Change Management (M365 Migration) Consultant – NHS, UK
+Led initiatives focused on data-driven change management during the NHS-wide M365 migration.
+Consolidated data from multiple sources, including ServiceNow and Viva Suite, to build Power Apps and Power BI solutions for reporting and visualisation.
+Conducted analytical walkthroughs with clients, presenting insights on low-engagement organisations and delivering tailored Power BI dashboards that included CoreView Training Analytics, Communication & Engagement Analytics, Service Now Analytics, and M365 Use Case Implementation Dashboard.
+Designed and executed A/B testing to evaluate email communication effectiveness and derived insights to optimise communication strategies.
+Designed and implemented an RPA workflow in UiPath to automate the extraction of data from the NHS portal, integrated it into Power BI dashboards and created Power Automate flows to streamline and schedule email campaign delivery. 
+Data Visualization Specialist - Public Investment Fund (PIF), KSA
+Conducted requirement gathering sessions and designed mock-ups basis client inputs
+Used SQL to analyse the data received from multiple sources for identifying the required data fields for visualisation
+Developed Several comprehensive analytical Power BI Dashboards with large amounts of quantitative and qualitative data
+Data Consultant for the leading NGO in wildlife conservation
+Designed and implemented a VBA-based financial model and a Power App for streamlined data capture on project funding and activities.
+Created an executive-level Power BI dashboard tracking key financial metrics to support strategic planning.
+Conducted user interviews to ensure solutions were aligned with stakeholder needs and organisational goals.
+Power Platform Developer – Project Management Tool
+Developed a custom Power App for tracking project milestones, statuses, and financials. 
+Built Power BI dashboards to provide real-time insights to leadership.
+Automated key processes using Power Automate, including:
+Custom emails (with/without attachments) on project updates.
+Teams alerts for deadlines and budget issues.
+TOOLS:
+Power apps, Power Automate, Power BI , Power Pages, Copilot Studio, UiPath, Visio, Collibra, SQL, Python, Generative AI & Agentic AI POC Development
 """
                 ),
                 MessagesPlaceholder(variable_name="chat_history"),
